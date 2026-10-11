@@ -307,3 +307,52 @@
 @media (max-width: 800px) {
   .contato { grid-template-columns: 1fr; }
 }
+/* Layout da secção Hero (Início) */
+.hero__content {
+  display: flex;
+  align-items: center; /* Alinha o texto e a imagem verticalmente ao centro */
+  justify-content: space-between; /* Empurra o texto para a esquerda e a imagem para a direita */
+  gap: 2rem; /* Espaço entre o texto e a imagem */
+}
+
+/* O texto ocupa o espaço necessário */
+.hero__texto {
+  flex: 1;
+}
+
+/* A caixa da imagem também ocupa espaço flexível, mas pode limitar a largura máxima */
+.hero__imagem {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* Encosta a imagem à direita dentro da sua coluna */
+}
+
+/* Estilo da foto */
+.hero__foto {
+  max-width: 350px; /* Ajuste este valor consoante o tamanho que quiser para a foto */
+  width: 100%;
+  border-radius: 50%; /* Faz a foto ficar redonda. Se quiser quadrada/retangular, apague esta linha */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra subtil para destacar do fundo escuro */
+  border: 4px solid var(--primary-color, #00d2ff); /* Opcional: Adiciona uma borda com a cor azul de destaque. Ajuste a cor se necessário. */
+}
+
+/* Tornar responsivo (para ecrãs pequenos) */
+@media (max-width: 768px) {
+  .hero__content {
+    flex-direction: column-reverse; /* No telemóvel, coloca a imagem por cima do texto (ou mude para 'column' se quiser o texto por cima) */
+    text-align: center; /* Centra o texto no telemóvel */
+  }
+
+  .hero__imagem {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .hero__foto {
+      max-width: 250px; /* Foto ligeiramente mais pequena em telemóveis */
+  }
+  
+  .hero__cta {
+      justify-content: center; /* Centra os botões no telemóvel */
+  }
+}

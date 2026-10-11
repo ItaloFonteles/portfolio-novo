@@ -2,11 +2,18 @@
   const lista = document.getElementById('lista-cases');
   const aviso = document.getElementById('cases-aviso');
 
-  // evita que texto do JSON seja interpretado como HTML
+  // evita que texto do JSON seja interpretado como HTML (otimizado com Regex)
   function esc(texto) {
-    const el = document.createElement('span');
-    el.textContent = texto;
-    return el.innerHTML;
+    if (!texto) return '';
+    return texto.toString().replace(/[&<>'"]/g, 
+      tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+      }[tag])
+    );
   }
 
   function criarCase(c) {
@@ -62,6 +69,7 @@
       observar();
     } catch (erro) {
       console.error('Erro ao carregar cases:', erro);
+      lista.innerHTML = ''; // Garante a limpeza do contentor em caso de falha
       aviso.textContent = 'Não foi possível carregar os cases agora.';
       aviso.hidden = false;
     }

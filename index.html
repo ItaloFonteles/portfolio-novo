@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<<head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ítalo Fonteles: infraestrutura audiovisual, automação e desenvolvimento de sistemas.">
   <meta name="author" content="Ítalo Fonteles">
   <meta name="theme-color" content="#0b1120">
+
+  <!-- Otimização de Performance: Preload dos estilos principais -->
+  <link rel="preload" href="css/base.css" as="style">
+  <link rel="preload" href="css/components.css" as="style">
 
   <!-- Pré-visualização ao compartilhar no LinkedIn/WhatsApp -->
   <meta property="og:type" content="website">
@@ -32,163 +36,171 @@
       <a href="#projetos">Projetos</a>
       <a href="#campo">Campo</a>
       <a href="#contato">Contato</a>
-      
     </nav>
   </header>
 
   <main>
     <section id="inicio" class="hero">
-      <div class="container hero__content">
-        <p class="hero__eyebrow">Olá, eu sou</p>
-        <h1>Ítalo Fonteles</h1>
-        <p class="hero__role">Infraestrutura A/V · Automação · Desenvolvimento de Sistemas</p>
-        <p class="hero__text">
-          Operei sistemas críticos em campo, de Câmaras Municipais a tribunais,
-          e agora construo as ferramentas que automatizam esse trabalho.
-        </p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#projetos">Ver projetos</a>
-          <a class="btn btn--ghost" href="assets/curriculo.pdf" download>Baixar currículo</a>
+  <div class="container hero__content">
+    
+    <!-- Lado Esquerdo: Texto -->
+    <div class="hero__texto">
+      <p class="hero__eyebrow">Olá, eu sou</p>
+      <h1>Ítalo Fonteles</h1>
+      <p class="hero__role">Infraestrutura A/V · Automação · Desenvolvimento de Sistemas</p>
+      <p class="hero__text">
+        Operei sistemas críticos em campo, de Câmaras Municipais a tribunais,
+        e agora construo as ferramentas que automatizam esse trabalho.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#projetos">Ver projetos</a>
+        <a class="btn btn--ghost" href="assets/curriculo.pdf" download>Baixar currículo</a>
+      </div>
+    </div>
+
+    <!-- Lado Direito: Imagem -->
+    <div class="hero__imagem">
+      <img src="assets/img/foto-perfil.jpg" alt="Foto de perfil de Ítalo Fonteles" class="hero__foto">
+    </div>
+
+  </div>
+</section>
+
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2 class="section__title reveal">Sobre</h2>
+
+        <div class="sobre reveal">
+          <div class="sobre__texto">
+            <p>
+              Trabalhei com infraestrutura audiovisual e transmissão em Câmaras
+              Municais e no TJPR: redes, câmeras PTZ, encoders, mixers,
+              atualização de firmwares e diagnóstico em campo.
+            </p>
+            <p>
+              Hoje levo essa experiência para o software. Estudo Análise e
+              Desenvolvimento de Sistemas e construo ferramentas em Python, Java
+              e n8n para monitorar, documentar e automatizar o que antes eu fazia
+              manualmente.
+            </p>
+            <ul class="tags">
+              <li>Java (POO)</li>
+              <li>n8n</li>
+              <li>Docker</li>
+              <li>Python</li>
+            </ul>
+          </div>
+
+          <ol class="timeline">
+            <li class="timeline__item">
+              <span class="timeline__periodo">[2025-2026]</span>
+              <h3>Riole · Suporte Técnico e Instalação</h3>
+              <p>Infraestrutura A/V, automação e transmissão em Câmaras Municipais.</p>
+            </li>
+            <li class="timeline__item">
+              <span class="timeline__periodo">[2025-2027]</span>
+              <h3>ADS · UniCesumar</h3>
+              <p>Programação orientada a objetos, modelagem UML e banco de dados.</p>
+            </li>
+            <li class="timeline__item timeline__item--atual">
+              <span class="timeline__periodo">Agora</span>
+              <h3>Automação e Sistemas</h3>
+              <p>Projetos práticos com Python, Docker e n8n unindo infra e código.</p>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="section">
-  <div class="container">
-    <h2 class="section__title reveal">Sobre</h2>
+    <section id="stack" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title reveal">Stack</h2>
 
-    <div class="sobre reveal">
-      <div class="sobre__texto">
-        <p>
-          Trabalhei com infraestrutura audiovisual e transmissão em Câmaras
-          Municipais e no TJPR: redes, câmeras PTZ, encoders, mixers,
-          atualização de firmwares e diagnóstico em campo.
-        </p>
-        <p>
-          Hoje levo essa experiência para o software. Estudo Análise e
-          Desenvolvimento de Sistemas e construo ferramentas em Python, Java
-          e n8n para monitorar, documentar e automatizar o que antes eu fazia
-          manualmente.
-        </p>
-        <ul class="tags">
-          <li>Java (POO)</li>
-          <li>n8n</li>
-          <li>Docker</li>
-          <li>Python</li>
-        </ul>
+        <div class="stack reveal">
+          <div class="stack__grupo">
+            <h3>Desenvolvimento</h3>
+            <ul class="tags">
+              <li>Python</li><li>JavaScript</li><li>Java</li><li>SQL</li>
+              <li>HTML5</li><li>CSS3</li>
+            </ul>
+          </div>
+          <div class="stack__grupo">
+            <h3>Automação e DevOps</h3>
+            <ul class="tags">
+              <li>Docker</li><li>n8n</li><li>Git / GitHub</li><li>VS Code</li>
+            </ul>
+          </div>
+          <div class="stack__grupo">
+            <h3>Infraestrutura e A/V</h3>
+            <ul class="tags">
+              <li>Redes</li><li>Câmeras PTZ</li><li>Encoders</li>
+              <li>Mixers / Áudio digital</li><li>Firmware e diagnóstico</li><li>Hardware</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <ol class="timeline">
-        <li class="timeline__item">
-          <span class="timeline__periodo">[2025-2026]</span>
-          <h3>Riole · Suporte Técnico e Instalação</h3>
-          <p>Infraestrutura A/V, automação e transmissão em Câmaras Municipais.</p>
-        </li>
-        <li class="timeline__item">
-          <span class="timeline__periodo">[2025-2027]</span>
-          <h3>ADS · UniCesumar</h3>
-          <p>Programação orientada a objetos, modelagem UML e banco de dados.</p>
-        </li>
-        <li class="timeline__item timeline__item--atual">
-          <span class="timeline__periodo">Agora</span>
-          <h3>Automação e Sistemas</h3>
-          <p>Projetos práticos com Python, Docker e n8n unindo infra e código.</p>
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
-
-<section id="stack" class="section section--alt">
-  <div class="container">
-    <h2 class="section__title reveal">Stack</h2>
-
-    <div class="stack reveal">
-      <div class="stack__grupo">
-        <h3>Desenvolvimento</h3>
-        <ul class="tags">
-          <li>Python</li><li>JavaScript</li><li>Java</li><li>SQL</li>
-          <li>HTML5</li><li>CSS3</li>
-        </ul>
-      </div>
-      <div class="stack__grupo">
-        <h3>Automação e DevOps</h3>
-        <ul class="tags">
-          <li>Docker</li><li>n8n</li><li>Git / GitHub</li><li>VS Code</li>
-        </ul>
-      </div>
-      <div class="stack__grupo">
-        <h3>Infraestrutura e A/V</h3>
-        <ul class="tags">
-          <li>Redes</li><li>Câmeras PTZ</li><li>Encoders</li>
-          <li>Mixers / Áudio digital</li><li>Firmware e diagnóstico</li><li>Hardware</li>
-        </ul>
-      </div>
-    </div>
-  </div>
- </section>
+    </section>
 
     <section id="projetos" class="section">
-  <div class="container">
-    <h2 class="section__title reveal">Projetos</h2>
+      <div class="container">
+        <h2 class="section__title reveal">Projetos</h2>
+        <div class="filtros reveal" id="filtros" role="group" aria-label="Filtrar projetos"></div>
+        <div class="projetos-grid" id="lista-projetos"></div>
+        <p class="projetos-aviso" id="projetos-aviso" hidden></p>
+      </div>
+    </section>
 
-    <div class="filtros reveal" id="filtros" role="group" aria-label="Filtrar projetos"></div>
+    <section id="campo" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title reveal">Experiência de campo</h2>
+        <p class="campo__intro reveal">
+          Infraestrutura audiovisual e de TI em ambientes institucionais, onde
+          falha não é opção. Cada caso mostra o problema, o que foi feito e o resultado.
+        </p>
+        <div class="cases" id="lista-cases"></div>
+        <p class="projetos-aviso" id="cases-aviso" hidden></p>
+      </div>
+    </section>
 
-    <div class="projetos-grid" id="lista-projetos"></div>
-    <p class="projetos-aviso" id="projetos-aviso" hidden></p>
-  </div>
-</section>
-<section id="campo" class="section section--alt">
-  <div class="container">
-    <h2 class="section__title reveal">Experiência de campo</h2>
-    <p class="campo__intro reveal">
-      Infraestrutura audiovisual e de TI em ambientes institucionais, onde
-      falha não é opção. Cada caso mostra o problema, o que foi feito e o resultado.
-    </p>
-    <div class="cases" id="lista-cases"></div>
-    <p class="projetos-aviso" id="cases-aviso" hidden></p>
-  </div>
-</section>
+    <section id="contato" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title reveal">Contato</h2>
+        <p class="campo__intro reveal">
+          Quer conversar sobre uma vaga, um projeto ou uma automação? Me chame.
+        </p>
 
-    <<section id="contato" class="section section--alt">
-  <div class="container">
-    <h2 class="section__title reveal">Contato</h2>
-    <p class="campo__intro reveal">
-      Quer conversar sobre uma vaga, um projeto ou uma automação? Me chame.
-    </p>
+        <div class="contato reveal">
+          <form class="contato__form" id="form-contato" novalidate>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required>
 
-    <div class="contato reveal">
-      <form class="contato__form" id="form-contato" novalidate>
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" name="nome" autocomplete="name" required>
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-        <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <p class="contato__erro" id="contato-erro" role="alert" hidden></p>
+            <button type="submit" class="btn btn--primary">Enviar pelo WhatsApp</button>
+          </form>
 
-        <p class="contato__erro" id="contato-erro" role="alert" hidden></p>
-        <button type="submit" class="btn btn--primary">Enviar pelo WhatsApp</button>
-      </form>
+          <ul class="contato__links">
+            <li><a href="https://www.linkedin.com/in/italo-fonteles-543984356/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/ItaloFonteles" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="mailto:italofonteles@gmail.com">italofonteles@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
 
-      <ul class="contato__links">
-        <li><a href="https://www.linkedin.com/in/italo-fonteles-543984356/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://github.com/ItaloFonteles" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="mailto:SEU-EMAIL-AQUI">italofonteles@gmail.com</a></li>
-      </ul>
+  <footer class="rodape">
+    <div class="container">
+      <p>© <span id="ano"></span> Ítalo Fonteles · Feito com HTML, CSS e JavaScript</p>
     </div>
-  </div>
-</section>
-<footer class="rodape">
-  <div class="container">
-    <p>© <span id="ano"></span> Ítalo Fonteles · Feito com HTML, CSS e JavaScript</p>
-  </div>
-</footer>
+  </footer>
 
-  <script src="js/main.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/projetos.js"></script>
-  <script src="js/projetos.js"></script>
-  <script src="js/cases.js"></script>
-  <script src="js/cases.js"></script>
-  <script src="js/contato.js"></script>
+  <!-- Scripts corrigidos e otimizados com defer -->
+  <script src="js/main.js" defer></script>
+  <script src="js/projetos.js" defer></script>
+  <script src="js/cases.js" defer></script>
+  <script src="js/contato.js" defer></script>
 </body>
 </html>
