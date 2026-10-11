@@ -29,18 +29,18 @@
     "tags": ["Novastar", "QSC", "Shure", "Redes", "Nobreak"]
   },
   {
-    "titulo": "Servidor de processamento em rack",
-    "local": "Montagem e validação em bancada",
-    "video": "assets/video/montagem-servidores.mp4",
-    "poster": "assets/img/capa-servidor.jpg",
-    "problema": "Era preciso uma workstation/servidor de alto desempenho em chassi de rack para processos pesados.",
+    "titulo": "Infraestrutura Elétrica para Auditório",
+    "local": "Justiça Federal do Ceará (JFCE)",
+    "video": "assets/video/jfce-eletrica.mp4",
+    "poster": null,
+    "problema": "Garantir alimentação segura, isolada e estável para os equipamentos audiovisuais de missão crítica do auditório, evitando surtos e interferências.",
     "solucao": [
-      "Placa-mãe MSI PRO H610M-E DDR4 com processador Intel Core i7",
-      "Placa de vídeo dedicada RTX 5060 Ti para processamento pesado",
-      "SSD NVMe M.2 direto no barramento da placa",
-      "Gabinete rack com fonte de 750 W dimensionada para a carga"
+      "Interpretação e execução rigorosa de diagrama unifilar de engenharia elétrica",
+      "Montagem de quadro de distribuição com dispositivos de proteção DPS e DR",
+      "Passagem de cabeamento individual (Fase, Neutro e Terra) dedicado para cada tomada",
+      "Estruturação, roteamento e acabamento estético dos circuitos em canaletas"
     ],
-    "resultado": "Servidor montado, parametrizado e validado, do trabalho em bancada à configuração final.",
-    "tags": ["Hardware", "Rack", "NVMe", "Troubleshooting"]
+    "resultado": "Quadro elétrico energizado e validado, entregando energia limpa e proteção total contra surtos para a infraestrutura da Justiça Federal.",
+    "tags": ["Elétrica", "Quadro de Distribuição", "DPS / DR", "Riole"]
   }
 ]
