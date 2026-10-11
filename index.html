@@ -1,9 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+<<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ítalo Fonteles: infraestrutura audiovisual, automação e desenvolvimento de sistemas.">
+  <meta name="author" content="Ítalo Fonteles">
+  <meta name="theme-color" content="#0b1120">
+
+  <!-- Pré-visualização ao compartilhar no LinkedIn/WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ítalo Fonteles | Infraestrutura, Automação e Sistemas">
+  <meta property="og:description" content="Infraestrutura A/V, automação e desenvolvimento de sistemas. Projetos e cases de campo.">
+  <meta property="og:image" content="https://italofonteles.github.io/portfolio-novo/assets/img/og-image.png">
+  <meta property="og:url" content="https://italofonteles.github.io/portfolio-novo/">
+
+  <!-- Ícone da aba (emoji, sem arquivo extra) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
   <title>Ítalo Fonteles | Infraestrutura, Automação e Sistemas</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -137,12 +150,45 @@
   </div>
 </section>
 
-    <section id="contato" class="section">
+    <<section id="contato" class="section section--alt">
+  <div class="container">
+    <h2 class="section__title reveal">Contato</h2>
+    <p class="campo__intro reveal">
+      Quer conversar sobre uma vaga, um projeto ou uma automação? Me chame.
+    </p>
+
+    <div class="contato reveal">
+      <form class="contato__form" id="form-contato" novalidate>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" autocomplete="name" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+        <p class="contato__erro" id="contato-erro" role="alert" hidden></p>
+        <button type="submit" class="btn btn--primary">Enviar pelo WhatsApp</button>
+      </form>
+
+      <ul class="contato__links">
+        <li><a href="https://www.linkedin.com/in/italo-fonteles-543984356/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/ItaloFonteles" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="mailto:SEU-EMAIL-AQUI">italofonteles@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<footer class="rodape">
+  <div class="container">
+    <p>© <span id="ano"></span> Ítalo Fonteles · Feito com HTML, CSS e JavaScript</p>
+  </div>
+</footer>
 
   <script src="js/main.js"></script>
   <script src="js/main.js"></script>
   <script src="js/projetos.js"></script>
   <script src="js/projetos.js"></script>
   <script src="js/cases.js"></script>
+  <script src="js/cases.js"></script>
+  <script src="js/contato.js"></script>
 </body>
 </html>
