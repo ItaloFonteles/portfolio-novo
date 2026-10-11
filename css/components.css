@@ -141,3 +141,67 @@
 @media (max-width: 800px) {
   .sobre { grid-template-columns: 1fr; gap: 40px; }
 }
+/* ===== FILTROS ===== */
+.filtros { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+
+.filtro {
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all .2s;
+}
+.filtro:hover { border-color: var(--accent); color: var(--accent); }
+.filtro--ativo { background: var(--accent); border-color: var(--accent); color: #0b1120; font-weight: bold; }
+
+/* ===== GRID E CARDS DE PROJETO ===== */
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  animation: aparecer .5s ease-out both;
+  transition: transform .25s, border-color .25s, box-shadow .25s;
+}
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 0 24px rgba(56, 189, 248, .15);
+}
+
+.card__status {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, .1);
+  color: var(--accent);
+}
+.card h3 { font-size: 1.15rem; }
+.card p { color: var(--text-muted); font-size: .95rem; flex-grow: 1; }
+
+.card__links { display: flex; gap: 18px; margin-top: 4px; }
+.card__links a { color: var(--accent); font-weight: 600; }
+.card__links a:hover { text-decoration: underline; }
+.card__breve { color: var(--text-muted); font-size: .9rem; font-style: italic; }
+
+.projetos-aviso { color: var(--text-muted); text-align: center; }

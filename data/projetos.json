@@ -1,0 +1,38 @@
+[
+  {
+    "titulo": "Sistema de Vendas Online",
+    "resumo": "E-commerce modelado com diagramas de classe UML e implementado em Java aplicando orientação a objetos.",
+    "tags": ["Java", "POO", "UML"],
+    "categoria": "sistemas",
+    "status": "Em desenvolvimento",
+    "repo": null,
+    "demo": null
+  },
+  {
+    "titulo": "Monitor de Dispositivos de Rede",
+    "resumo": "Verifica câmeras PTZ, encoders e switches e avisa no Telegram quando algum equipamento cai.",
+    "tags": ["Python", "Docker", "SQLite"],
+    "categoria": "automacao",
+    "status": "Planejado",
+    "repo": null,
+    "demo": null
+  },
+  {
+    "titulo": "Automação de Rotinas com n8n",
+    "resumo": "Fluxos automatizados rodando em containers Docker para otimizar tarefas e gestão de dados.",
+    "tags": ["n8n", "Docker"],
+    "categoria": "automacao",
+    "status": "Em desenvolvimento",
+    "repo": null,
+    "demo": null
+  },
+  {
+    "titulo": "Portfólio Digital",
+    "resumo": "Este site: HTML, CSS e JavaScript puros, com projetos renderizados a partir de um JSON.",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "categoria": "sistemas",
+    "status": "No ar",
+    "repo": "https://github.com/ItaloFonteles/portfolio-novo",
+    "demo": null
+  }
+]
