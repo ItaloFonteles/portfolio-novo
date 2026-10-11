@@ -203,5 +203,56 @@
 .card__links a { color: var(--accent); font-weight: 600; }
 .card__links a:hover { text-decoration: underline; }
 .card__breve { color: var(--text-muted); font-size: .9rem; font-style: italic; }
+.projetos-aviso { color: var(--text-muted); text-align: center; } 
+/* ===== EXPERIÊNCIA DE CAMPO ===== */
+.campo__intro { max-width: 640px; color: var(--text-muted); margin: -16px 0 40px; }
 
-.projetos-aviso { color: var(--text-muted); text-align: center; }
+.cases { display: flex; flex-direction: column; gap: 40px; }
+
+.case {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .8s ease-out, transform .8s ease-out, border-color .3s;
+}
+.case--visivel { opacity: 1; transform: none; }
+.case:hover { border-color: var(--accent); }
+
+/* alterna o lado do vídeo em cada case */
+.case:nth-child(even) .case__midia { order: 2; }
+
+.case__midia {
+  aspect-ratio: 3 / 4;
+  max-height: 480px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #000;
+}
+.case__midia video { width: 100%; height: 100%; object-fit: cover; }
+
+.case__local { font-family: var(--font-mono); font-size: .8rem; color: var(--accent); }
+.case__texto h3 { font-size: 1.3rem; margin: 4px 0 8px; }
+.case__texto h4 {
+  margin: 16px 0 4px;
+  font-size: .8rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.case__texto p { color: #cbd5e1; }
+.case__texto ul:not(.tags) { margin-left: 20px; color: #cbd5e1; }
+.case__texto li { margin-bottom: 4px; }
+.case__texto .tags { margin-top: 20px; }
+
+@media (max-width: 800px) {
+  .case { grid-template-columns: 1fr; }
+  .case:nth-child(even) .case__midia { order: 0; }
+  .case__midia { aspect-ratio: 16 / 10; max-height: 320px; }
+}
