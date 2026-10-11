@@ -21,7 +21,7 @@
     return `
       <article class="case">
         <div class="case__midia">
-          <video src="${esc(c.video)}"${poster} muted loop playsinline preload="metadata"
+          <video src="${esc(c.video)}"${poster} autoplay muted loop playsinline preload="auto"
                  aria-label="Vídeo: ${esc(c.titulo)}"></video>
         </div>
         <div class="case__texto">
