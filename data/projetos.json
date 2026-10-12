@@ -13,8 +13,8 @@
     "resumo": "Vigia internet, câmeras, sistemas e o nobreak. Avisa no Telegram ou WhatsApp quando algo cai e quando falta energia, com painel ao vivo e relatório mensal de disponibilidade para o cliente.",
     "tags": ["Python", "Docker", "SQLite", "Telegram", "NUT"],
     "categoria": "infra",
-    "status": "Em testes",
-    "repo": null,
+    "status": "Funcionando",
+    "repo": "https://github.com/ItaloFonteles/monitor-rede-energia",
     "demo": null
   },
   {
