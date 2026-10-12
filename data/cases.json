@@ -1,46 +1,49 @@
 [
   {
     "titulo": "Plenário de missão crítica",
-    "local": "Tribunal de Justiça do Paraná (TJPR)",
+    "local": "Tribunal de Justiça do Paraná (TJPR) · projeto Riole",
     "video": "assets/video/plenario.mp4",
     "poster": null,
-    "problema": "Sessões solenes e judiciais exigem áudio, vídeo e transmissão que não podem falhar nem depender de operação manual complexa.",
+    "problema": "Sessões solenes e judiciais exigem áudio, vídeo e transmissão confiáveis, que não podem falhar nem depender de uma operação manual complicada.",
+    "papel": "Atuei como técnico de instalação na equipe da Riole, na montagem, configuração e testes do sistema do plenário.",
     "solucao": [
-      "Rack com processamento de áudio digital Riole e distribuição de sinal",
-      "Painéis de LED integrados e central de monitoramento para corte de vídeo",
-      "Câmeras PTZ com controle fino via joystick"
+      "Rack com processamento de áudio digital e distribuição de sinal",
+      "Painéis de LED integrados a uma central de monitoramento para corte de vídeo",
+      "Câmeras PTZ com controle fino por joystick"
     ],
-    "resultado": "Ambiente automatizado, estável e seguro para operações de alto rigor.",
-    "tags": ["Riole", "PTZ", "LED", "Áudio digital"]
+    "resultado": "Plenário entregue com áudio, vídeo e transmissão integrados, operados de forma simples e estável durante as sessões.",
+    "tags": ["Câmeras PTZ", "Painéis de LED", "Áudio digital", "Transmissão"]
   },
   {
     "titulo": "Rack de convergência A/V e TI",
-    "local": "TJ-PR · montagem end-to-end",
+    "local": "Tribunal de Justiça do Paraná (TJPR) · projeto Riole",
     "video": "assets/video/cabeamento-rack.mp4",
     "poster": null,
-    "problema": "Reunir rede, áudio profissional e vários telões de LED em um único ponto de comando, com tolerância mínima a falhas.",
+    "problema": "Reunir rede, áudio profissional e vários telões de LED em um único ponto de comando, com o mínimo de pontos de falha.",
+    "papel": "Participei da montagem física do rack, do cabeamento e da organização dos equipamentos, junto com a equipe técnica da Riole.",
     "solucao": [
-      "5 processadoras Novastar e endpoints QSC NV-32 para gerir os displays",
+      "5 processadoras Novastar e endpoints QSC NV-32 para gerenciar os displays",
       "Microfones sem fio Shure e processadores QSC com cabeamento isolado",
-      "Servidor central ancorado e switches com cable management",
+      "Servidor central fixado no rack e switches com organização de cabos (cable management)",
       "Duplo nobreak para estabilidade e proteção elétrica"
     ],
-    "resultado": "Centro de comando audiovisual e de TI de nível governamental, projetado para falha zero.",
+    "resultado": "Centro de comando audiovisual e de TI organizado, com redundância de energia e manutenção facilitada.",
     "tags": ["Novastar", "QSC", "Shure", "Redes", "Nobreak"]
   },
   {
-    "titulo": "Infraestrutura Elétrica para Auditório",
-    "local": "Justiça Federal do Ceará (JFCE)",
+    "titulo": "Infraestrutura elétrica para auditório",
+    "local": "Justiça Federal do Ceará (JFCE) · projeto Riole",
     "video": "assets/video/jfce-eletrica.mp4",
     "poster": null,
-    "problema": "Garantir alimentação segura, isolada e estável para os equipamentos audiovisuais de missão crítica do auditório, evitando surtos e interferências.",
+    "problema": "Garantir alimentação segura, isolada e estável para os equipamentos audiovisuais do auditório, reduzindo o risco de surtos e interferências.",
+    "papel": "Atuei na execução da parte elétrica, seguindo o projeto de engenharia: montagem do quadro, passagem dos cabos e acabamento.",
     "solucao": [
-      "Interpretação e execução rigorosa de diagrama unifilar de engenharia elétrica",
+      "Execução do diagrama unifilar definido pelo projeto de engenharia elétrica",
       "Montagem de quadro de distribuição com dispositivos de proteção DPS e DR",
-      "Passagem de cabeamento individual (Fase, Neutro e Terra) dedicado para cada tomada",
-      "Estruturação, roteamento e acabamento estético dos circuitos em canaletas"
+      "Circuitos dedicados com cabeamento individual (fase, neutro e terra) para cada tomada",
+      "Roteamento e acabamento dos circuitos em canaletas"
     ],
-    "resultado": "Quadro elétrico energizado e validado, entregando energia limpa e proteção total contra surtos para a infraestrutura da Justiça Federal.",
-    "tags": ["Elétrica", "Quadro de Distribuição", "DPS / DR", "Riole"]
+    "resultado": "Quadro elétrico energizado e testado, com circuitos dedicados e proteção contra surtos para os equipamentos do auditório.",
+    "tags": ["Elétrica", "Quadro de distribuição", "DPS / DR", "Canaletas"]
   }
 ]

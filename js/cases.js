@@ -16,7 +16,10 @@
 
           <h4>Problema</h4>
           <p>${esc(c.problema)}</p>
-
+${c.papel ? `
+          <h4>Minha participação</h4>
+          <p>${esc(c.papel)}</p>
+` : ''}
           <h4>Solução</h4>
           <ul>${c.solucao.map(s => `<li>${esc(s)}</li>`).join('')}</ul>
 
