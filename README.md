@@ -190,7 +190,7 @@ O site é publicado pela **Cloudflare** (Worker `portfolio-novo`, ligado a este 
 
 ## Contato
 
-- E-mail: italofontelles@gmail.com
+- E-mail: contato@italofonteles.dev
 - WhatsApp: (95) 99161-8031
 - LinkedIn: [Ítalo Fonteles](https://www.linkedin.com/in/italo-fonteles-543984356/)
 - GitHub: [@ItaloFonteles](https://github.com/ItaloFonteles)
