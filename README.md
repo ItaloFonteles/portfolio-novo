@@ -4,7 +4,7 @@ Portfólio profissional de **infraestrutura de TI e audiovisual, automação e d
 
 Atendendo empresas e escritórios em **Boa Vista - RR**.
 
-🌐 **Site:** https://italofonteles.github.io/portfolio-novo/
+🌐 **Site:** https://italofonteles.github.io/portfolio-profissional/
 📄 **Currículo:** [assets/curriculo.pdf](assets/curriculo.pdf)
 
 ![Prévia do portfólio](assets/img/preview.jpg)
@@ -61,7 +61,7 @@ Tema **vinho e dourado** sobre fundo champanhe, alternando seções claras e esc
 ## Estrutura de pastas
 
 ```
-portfolio-novo/
+portfolio-profissional/
 ├── index.html
 ├── css/
 │   ├── base.css          # variáveis de tema (cores, fontes), reset e tipografia
@@ -95,8 +95,8 @@ Os dados são carregados com `fetch`, que **não funciona abrindo o `index.html`
 **Opção 2: Python**
 
 ```bash
-git clone https://github.com/ItaloFonteles/portfolio-novo.git
-cd portfolio-novo
+git clone https://github.com/ItaloFonteles/portfolio-profissional.git
+cd portfolio-profissional
 python -m http.server 5500
 ```
 
