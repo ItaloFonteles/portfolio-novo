@@ -2,26 +2,12 @@
   const lista = document.getElementById('lista-cases');
   const aviso = document.getElementById('cases-aviso');
 
-  // evita que texto do JSON seja interpretado como HTML (otimizado com Regex)
-  function esc(texto) {
-    if (!texto) return '';
-    return texto.toString().replace(/[&<>'"]/g, 
-      tag => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        "'": '&#39;',
-        '"': '&quot;'
-      }[tag])
-    );
-  }
-
   function criarCase(c) {
     const poster = c.poster ? ` poster="${esc(c.poster)}"` : '';
     return `
       <article class="case">
         <div class="case__midia">
-          <video src="${esc(c.video)}"${poster} autoplay muted loop playsinline preload="auto"
+          <video src="${esc(c.video)}"${poster} muted loop playsinline preload="metadata"
                  aria-label="Vídeo: ${esc(c.titulo)}"></video>
         </div>
         <div class="case__texto">
@@ -69,7 +55,7 @@
       observar();
     } catch (erro) {
       console.error('Erro ao carregar cases:', erro);
-      lista.innerHTML = ''; // Garante a limpeza do contentor em caso de falha
+      lista.innerHTML = '';
       aviso.textContent = 'Não foi possível carregar os cases agora.';
       aviso.hidden = false;
     }

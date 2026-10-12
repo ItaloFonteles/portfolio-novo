@@ -33,8 +33,54 @@ a { color: inherit; text-decoration: none; }
 
 .section { padding: 90px 0; }
 .section--alt { background: var(--bg-alt); }
+.section h2 { font-size: 2rem; margin-bottom: 24px; }/* ===== VARIÁVEIS: trocar o tema inteiro mexendo só aqui ===== */
+:root {
+  /* Tema: vinho + dourado */
+  --bg: #f4ecdc;          /* champanhe (fundo principal) */
+  --bg-alt: #ede1ca;      /* dourado claro (seções alternadas) */
+  --surface: #fbf7ef;     /* marfim (cards) */
+  --gold: #c9a24b;        /* dourado (detalhes) */
+  --border: #e3d3b4;
+  --text: #24191a;
+  --text-soft: #43373a;   /* parágrafos */
+  --text-muted: #6b5d5f;
+  --accent: #7a1f2b;      /* vinho */
+  --accent-hover: #5a1520;
+  --on-accent: #f8f9fa;   /* texto sobre fundo accent */
+
+  --font-sans: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --font-mono: "Cascadia Code", Consolas, monospace;
+  --radius: 12px;
+  --nav-height: 64px;
+
+  /* Foto do hero: ajuste aqui o enquadramento (x y). Ex.: center 20%, center top, 30% 15% */
+  --foto-posicao: center 20%;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+img, video { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container { width: min(1100px, 100% - 40px); margin-inline: auto; }
+
+.section { padding: 90px 0; }
+.section--alt { background: var(--bg-alt); }
 .section h2 { font-size: 2rem; margin-bottom: 24px; }
 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   * { animation: none !important; transition: none !important; }
