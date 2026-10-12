@@ -1,6 +1,7 @@
 (() => {
   const ROTULOS = {
     todos: 'Todos',
+    sites: 'Sites',
     sistemas: 'Sistemas',
     automacao: 'Automação',
     infra: 'Infraestrutura'

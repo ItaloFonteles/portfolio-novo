@@ -1,36 +1,63 @@
 [
   {
-    "titulo": "Sistema de Vendas Online",
-    "resumo": "E-commerce modelado com diagramas de classe UML e implementado em Java aplicando orientação a objetos.",
-    "tags": ["Java", "POO", "UML"],
-    "categoria": "sistemas",
+    "titulo": "Atendimento e Agendamento Trilíngue no WhatsApp",
+    "resumo": "Robô que atende em português, espanhol e inglês, marca horários na agenda, envia lembretes e reduz faltas. Feito para clínicas, salões e comércio que atende clientes venezuelanos e guianenses.",
+    "tags": ["n8n", "WhatsApp", "Docker", "PostgreSQL"],
+    "categoria": "automacao",
     "status": "Em desenvolvimento",
     "repo": null,
     "demo": null
   },
   {
-    "titulo": "Monitor de Dispositivos de Rede",
-    "resumo": "Verifica câmeras PTZ, encoders e switches e avisa no Telegram quando algum equipamento cai.",
-    "tags": ["Python", "Docker", "SQLite"],
+    "titulo": "Monitor de Rede e Energia",
+    "resumo": "Vigia internet, câmeras, switches e nobreaks. Avisa no WhatsApp/Telegram quando a energia ou o link caem e gera um relatório mensal de disponibilidade para o cliente.",
+    "tags": ["Python", "Docker", "n8n", "Telegram"],
+    "categoria": "infra",
+    "status": "Em desenvolvimento",
+    "repo": null,
+    "demo": null
+  },
+  {
+    "titulo": "Servidor de Escritório que Funciona Offline",
+    "resumo": "Arquivos, senhas e backup da empresa num servidor local que continua funcionando quando a internet cai, com acesso remoto seguro e cópia automática para a nuvem.",
+    "tags": ["Docker", "Nextcloud", "WireGuard", "Backup"],
+    "categoria": "infra",
+    "status": "Planejado",
+    "repo": null,
+    "demo": null
+  },
+  {
+    "titulo": "Site + Captação de Clientes para Comércio Local",
+    "resumo": "Site rápido e bilíngue com botão de WhatsApp e formulário que alimenta uma planilha de contatos e dispara resposta e lembrete de retorno automaticamente.",
+    "tags": ["HTML", "CSS", "JavaScript", "n8n"],
+    "categoria": "sites",
+    "status": "Planejado",
+    "repo": null,
+    "demo": null
+  },
+  {
+    "titulo": "Transmissão Automatizada de Sessões",
+    "resumo": "Para Câmaras e órgãos públicos: verifica o encoder, abre a live no YouTube, divulga o link, alerta se a transmissão cair e arquiva o vídeo com a pauta.",
+    "tags": ["n8n", "YouTube API", "Encoders", "Docker"],
     "categoria": "automacao",
     "status": "Planejado",
     "repo": null,
     "demo": null
   },
   {
-    "titulo": "Automação de Rotinas com n8n",
-    "resumo": "Fluxos automatizados rodando em containers Docker para otimizar tarefas e gestão de dados.",
-    "tags": ["n8n", "Docker"],
-    "categoria": "automacao",
+    "titulo": "Sistema de Vendas Online",
+    "resumo": "E-commerce modelado com diagramas de classe UML e implementado em Java aplicando orientação a objetos.",
+    "tags": ["Java", "POO", "UML"],
+    "categoria": "sistemas",
     "status": "Em desenvolvimento",
-    "repo": null,
+    "repo": "https://github.com/ItaloFonteles/MAPA-Analise-Sistema-Venda--Online",
     "demo": null
   },
   {
     "titulo": "Portfólio Digital",
     "resumo": "Este site: HTML, CSS e JavaScript puros, com projetos renderizados a partir de um JSON.",
     "tags": ["HTML", "CSS", "JavaScript"],
-    "categoria": "sistemas",
+    "categoria": "sites",
     "status": "No ar",
     "repo": "https://github.com/ItaloFonteles/portfolio-novo",
     "demo": null

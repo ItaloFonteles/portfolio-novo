@@ -276,6 +276,42 @@
   to   { transform: translate(6%, -4%) rotate(8deg); }
 }
 
+/* ===== CLIENTES: print do site numa "janela de navegador" ===== */
+.clientes { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+
+.cliente {
+  display: flex; flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+.cliente:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 50px rgba(42, 10, 16, .15);
+}
+
+.cliente__tela { display: block; overflow: hidden; background: #1c060a; }
+.cliente__barra {
+  display: flex; gap: 6px; align-items: center;
+  height: 28px; padding: 0 12px;
+  background: linear-gradient(90deg, #2e0b12, #1a0609);
+}
+.cliente__barra i { width: 9px; height: 9px; border-radius: 50%; background: rgba(201, 162, 75, .55); }
+.cliente__tela img {
+  width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top;
+  transition: transform .6s ease;
+}
+.cliente:hover .cliente__tela img { transform: scale(1.04); }
+
+.cliente__info { display: flex; flex-direction: column; gap: 10px; padding: 24px; flex-grow: 1; }
+.cliente__info h3 { font-size: 1.2rem; }
+.cliente__info p { color: var(--text-soft); flex-grow: 1; }
+.cliente__link { align-self: flex-start; margin-top: 6px; color: var(--accent); font-weight: 700; }
+.cliente__link:hover { text-decoration: underline; }
+
 /* ===== FUNDO CLARO (Campo): luzes douradas flutuando + linhas de circuito sutis ===== */
 #campo { position: relative; isolation: isolate; overflow: hidden; }
 #campo::before {
@@ -456,7 +492,7 @@
     visibility: hidden;   /* links fora do foco do teclado quando fechado */
     transition: max-height .3s ease, visibility .3s;
   }
-  .navbar__menu.aberto { max-height: 300px; visibility: visible; }
+  .navbar__menu.aberto { max-height: 400px; visibility: visible; }
   .navbar__menu a { padding: 16px 24px; }
 
   /* hero */
