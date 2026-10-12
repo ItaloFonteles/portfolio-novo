@@ -10,10 +10,10 @@
   },
   {
     "titulo": "Monitor de Rede e Energia",
-    "resumo": "Vigia internet, câmeras, switches e nobreaks. Avisa no WhatsApp/Telegram quando a energia ou o link caem e gera um relatório mensal de disponibilidade para o cliente.",
-    "tags": ["Python", "Docker", "n8n", "Telegram"],
+    "resumo": "Vigia internet, câmeras, sistemas e o nobreak. Avisa no Telegram ou WhatsApp quando algo cai e quando falta energia, com painel ao vivo e relatório mensal de disponibilidade para o cliente.",
+    "tags": ["Python", "Docker", "SQLite", "Telegram", "NUT"],
     "categoria": "infra",
-    "status": "Em desenvolvimento",
+    "status": "Em testes",
     "repo": null,
     "demo": null
   },
