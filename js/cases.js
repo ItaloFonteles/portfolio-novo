@@ -7,7 +7,7 @@
     return `
       <article class="case">
         <div class="case__midia">
-          <video src="${esc(c.video)}"${poster} muted loop playsinline preload="metadata"
+          <video data-src="${esc(c.video)}"${poster} muted loop playsinline preload="none"
                  aria-label="Vídeo: ${esc(c.titulo)}"></video>
         </div>
         <div class="case__texto">
@@ -31,6 +31,27 @@ ${c.papel ? `
       </article>`;
   }
 
+  // O servidor não responde a pedidos parciais (Range), e o Safari do iPhone não toca vídeo assim.
+  // Por isso o vídeo é baixado inteiro e tocado a partir da memória (blob), onde o Range funciona.
+  function carregarVideo(video) {
+    if (video.dataset.carregado) return video.dataset.carregado === 'ok' ? Promise.resolve() : null;
+    video.dataset.carregado = 'carregando';
+    video.muted = true;   // o iPhone exige a propriedade (não só o atributo) para tocar sozinho
+
+    return fetch(video.dataset.src)
+      .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.blob(); })
+      .then((blob) => { video.src = URL.createObjectURL(blob); })
+      .catch(() => { video.src = video.dataset.src; })   // se falhar, tenta o endereço direto
+      .finally(() => { video.dataset.carregado = 'ok'; });
+  }
+
+  function tocar(video) {
+    video.play().catch(() => {
+      // Autoplay bloqueado (ex.: modo de economia de bateria): mostra o botão de play
+      video.controls = true;
+    });
+  }
+
   // anima o card ao aparecer e toca/pausa o vídeo conforme a visibilidade
   function observar() {
     const observador = new IntersectionObserver((entradas) => {
@@ -38,10 +59,13 @@ ${c.papel ? `
         const video = target.querySelector('video');
         if (isIntersecting) {
           target.classList.add('case--visivel');
-          if (video) video.play().catch(() => {});
+          if (!video) return;
+          const carregando = carregarVideo(video);
+          if (carregando) carregando.then(() => { if (target.dataset.visivel === '1') tocar(video); });
         } else if (video) {
           video.pause();
         }
+        target.dataset.visivel = isIntersecting ? '1' : '0';
       });
     }, { threshold: 0.25 });
 

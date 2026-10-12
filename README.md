@@ -1,3 +1,5 @@
+<img src="assets/marca/icone.svg" alt="Marca if" width="72">
+
 # Portfólio · Ítalo Fonteles
 
 Portfólio profissional de **infraestrutura de TI e audiovisual, automação e desenvolvimento de sites e sistemas**. Reúne clientes atendidos, projetos de software e cases de campo em ambientes de missão crítica, como Câmaras Municipais e tribunais.
@@ -30,6 +32,8 @@ O portfólio conta uma trajetória: **anos instalando e mantendo sistemas em cam
 - Animações de aparecer ao rolar (`IntersectionObserver`).
 - Linha do tempo da trajetória (Riole → ADS → Automação).
 - **Currículo em PDF** gerado a partir de uma página HTML, com o mesmo visual do site.
+- **Marca própria** ("if" com cursor de terminal piscando) no menu, na aba do navegador e no currículo.
+- **Preparado para o Google e para redes sociais:** `sitemap.xml`, `robots.txt`, dados estruturados (`schema.org/Person`), endereço canônico e imagem própria ao compartilhar o link.
 - Menu responsivo com versão mobile.
 - Conteúdo dos JSON escapado antes de ir para o HTML, evitando injeção de código.
 - Respeita a preferência do sistema por menos animação (`prefers-reduced-motion`): os fundos animados ficam parados.
@@ -41,8 +45,8 @@ O portfólio conta uma trajetória: **anos instalando e mantendo sistemas em cam
 | HTML5 | Estrutura semântica |
 | CSS3 | Variáveis, Grid, Flexbox, pseudo-elementos, `@keyframes`, filtros e máscaras, media queries |
 | JavaScript (ES6+) | `fetch`, `async/await`, `IntersectionObserver`, manipulação do DOM |
-| Git / GitHub | Versionamento e hospedagem |
-| GitHub Pages | Publicação do site |
+| Git / GitHub | Versionamento do código |
+| Cloudflare Workers | Publicação do site no domínio `italofonteles.dev`, com HTTPS |
 
 Sem frameworks e sem etapa de build: o projeto é HTML, CSS e JavaScript puros.
 
@@ -63,6 +67,9 @@ Tema **vinho e dourado** sobre fundo champanhe, alternando seções claras e esc
 ```
 portfolio-profissional/
 ├── index.html
+├── favicon.svg           # ícone da aba (marca "if")
+├── robots.txt            # orientações para os robôs de busca
+├── sitemap.xml           # mapa do site para o Google
 ├── css/
 │   ├── base.css          # variáveis de tema (cores, fontes), reset e tipografia
 │   └── components.css    # navbar, hero, clientes, cards, cases, contato e fundos animados
@@ -166,7 +173,6 @@ O logo é o **`if`** das iniciais (Ítalo Fonteles), o comando de decisão da pr
 
 Cores: vinho escuro `#1c060a`, marfim `#f8f4ec` e dourado `#c9a24b`.
 
-
 ## Personalização
 
 Todas as cores, fontes e medidas ficam nas variáveis do `:root` em `css/base.css`:
@@ -177,7 +183,10 @@ Todas as cores, fontes e medidas ficam nas variáveis do `:root` em `css/base.cs
 
 ## Publicação
 
-O site é publicado com **GitHub Pages**, a partir da branch `main` (pasta raiz). Cada `git push` atualiza o site em poucos minutos.
+O site é publicado pela **Cloudflare** (Worker `portfolio-novo`, ligado a este repositório) no domínio **https://italofonteles.dev**, com HTTPS automático. Cada `git push` na branch `main` publica a nova versão em 1 a 2 minutos.
+
+- `www.italofonteles.dev` também abre o site.
+- O site está cadastrado no [Google Search Console](https://search.google.com/search-console), com o `sitemap.xml` enviado.
 
 ## Contato
 

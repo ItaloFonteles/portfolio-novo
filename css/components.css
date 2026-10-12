@@ -380,7 +380,15 @@
   border-radius: 16px;
   background: #000;
 }
-.case__midia video { width: 100%; height: 100%; object-fit: cover; }
+.case__midia { position: relative; }
+.case__midia video { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; }
+/* aparece por trás do vídeo enquanto ele baixa (some quando o primeiro quadro é desenhado) */
+.case__midia::before {
+  content: "Carregando vídeo…";
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: .85rem; color: #e3c47a;
+}
 
 .case__local { font-family: var(--font-mono); font-size: .8rem; color: var(--accent); }
 .case__texto h3 { font-size: 1.3rem; margin: 4px 0 8px; }
