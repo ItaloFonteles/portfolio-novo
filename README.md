@@ -4,7 +4,7 @@ Portfólio profissional de **infraestrutura de TI e audiovisual, automação e d
 
 Atendendo empresas e escritórios em **Boa Vista - RR**.
 
-🌐 **Site:** https://italofonteles.github.io/portfolio-profissional/
+🌐 **Site:** https://italofonteles.dev/
 📄 **Currículo:** [assets/curriculo.pdf](assets/curriculo.pdf)
 
 ![Prévia do portfólio](assets/img/preview.jpg)
