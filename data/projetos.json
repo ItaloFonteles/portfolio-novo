@@ -4,8 +4,8 @@
     "resumo": "Robô que atende em português, espanhol e inglês, marca horários na agenda, envia lembretes e reduz faltas. Feito para clínicas, salões e comércio que atende clientes venezuelanos e guianenses.",
     "tags": ["n8n", "WhatsApp", "Docker", "PostgreSQL"],
     "categoria": "automacao",
-    "status": "Em desenvolvimento",
-    "repo": null,
+    "status": "Em testes",
+    "repo": "https://github.com/ItaloFonteles/atendimento-whatsapp",
     "demo": null
   },
   {
