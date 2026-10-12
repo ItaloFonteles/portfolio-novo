@@ -278,6 +278,49 @@
   to   { transform: translate(6%, -4%) rotate(8deg); }
 }
 
+/* ===== SERVIÇOS ===== */
+.servicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+
+.servico {
+  display: flex; flex-direction: column; gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 28px 24px 24px;
+  transition: transform .3s, box-shadow .3s, border-color .3s;
+}
+.servico:hover { transform: translateY(-6px); border-color: var(--gold); box-shadow: 0 20px 50px rgba(42, 10, 16, .12); }
+
+.servico__icone {
+  width: 44px; height: 44px; padding: 10px;
+  border-radius: 12px; background: #1c060a;
+  fill: none; stroke: #e3c47a; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.servico h3 { font-size: 1.3rem; }
+.servico__chamada { color: var(--accent); font-weight: 600; }
+.servico ul { list-style: none; display: flex; flex-direction: column; gap: 8px; color: var(--text-soft); flex-grow: 1; }
+.servico li { padding-left: 22px; position: relative; }
+.servico li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+.servico__exemplo { color: var(--text-muted); font-size: .9rem; text-decoration: underline; text-underline-offset: 3px; }
+.servico__exemplo:hover { color: var(--accent); }
+.servico__cta { text-align: center; margin-top: 4px; }
+
+/* Como funciona: 3 passos */
+.passos {
+  list-style: none; margin-top: 40px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;
+}
+.passos li {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 18px 20px; border-radius: var(--radius);
+  background: rgba(251, 247, 239, .6); border: 1px dashed var(--border);
+}
+.passos b { color: var(--accent); }
+.passos span { color: var(--text-soft); font-size: .95rem; }
+
+.sobre__curriculo { color: var(--accent); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
 /* ===== CLIENTES: print do site numa "janela de navegador" ===== */
 .clientes { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
 
