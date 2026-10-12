@@ -80,6 +80,7 @@ portfolio-profissional/
 └── assets/
     ├── curriculo.pdf
     ├── img/              # foto, fundos, prints dos clientes e prévia
+    ├── marca/            # logo "if" (SVG e PNG), favicon e imagem de compartilhamento
     └── video/            # vídeos dos cases
 ```
 
@@ -150,6 +151,21 @@ O PDF é gerado a partir de `curriculo/index.html`. Depois de editar o texto, ro
 ```
 
 O botão **"Baixar currículo"** do site aponta para `assets/curriculo.pdf`.
+
+## Marca
+
+O logo é o **`if`** das iniciais (Ítalo Fonteles), o comando de decisão da programação, com um cursor dourado de terminal. As letras são desenhadas em SVG (não dependem de fonte).
+
+| Arquivo | Uso |
+|---------|-----|
+| `assets/marca/icone.svg` | Logo principal (cantos arredondados) |
+| `assets/marca/icone-quadrado.svg` / `perfil-800.png` | Foto de perfil (LinkedIn, GitHub, WhatsApp) |
+| `favicon.svg`, `assets/marca/favicon-32.png` | Ícone da aba do navegador |
+| `assets/marca/apple-touch-icon.png` | Ícone ao salvar o site na tela do celular |
+| `assets/marca/compartilhar.jpg` | Imagem ao compartilhar o link (fonte: `compartilhar.html`) |
+
+Cores: vinho escuro `#1c060a`, marfim `#f8f4ec` e dourado `#c9a24b`.
+
 
 ## Personalização
 

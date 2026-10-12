@@ -7,8 +7,10 @@
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
-.navbar__logo { font-family: var(--font-mono); font-weight: bold; }
-.navbar__logo span { color: var(--accent); }
+.navbar__logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.05rem; color: var(--text); }
+.navbar__marca { width: 34px; height: 34px; flex-shrink: 0; }
+.navbar__cursor { animation: cursor-piscar 1.1s steps(1) infinite; }   /* cursor do "if" piscando */
+@keyframes cursor-piscar { 50% { opacity: 0; } }
 
 .navbar__menu { display: flex; gap: 32px; }
 .navbar__menu a { color: var(--text-muted); font-weight: 600; transition: color .2s; }

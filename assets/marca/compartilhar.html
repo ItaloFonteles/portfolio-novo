@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+  Fonte da imagem que aparece ao compartilhar o site (1200x630). Para gerar de novo, na raiz do projeto:
+  "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --hide-scrollbars --window-size=1200,630 --screenshot="C:\portfolio-novo\assets\marca\compartilhar.png" "file:///C:/portfolio-novo/assets/marca/compartilhar.html"
+-->
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    font-family: "Segoe UI", Arial, sans-serif; color: #fff;
+    background:
+      radial-gradient(circle at 85% 20%, rgba(201, 162, 75, .22), transparent 40%),
+      radial-gradient(circle at 10% 90%, rgba(160, 40, 58, .45), transparent 45%),
+      linear-gradient(135deg, #2e0b12, #12040a);
+    display: flex; align-items: center; gap: 64px; padding: 0 96px;
+    border-bottom: 8px solid #c9a24b;
+  }
+  img { width: 260px; height: 260px; border-radius: 56px; box-shadow: 0 0 0 2px rgba(201, 162, 75, .5), 0 30px 60px rgba(0, 0, 0, .5); }
+  h1 { font-size: 76px; font-weight: 700; line-height: 1.05; }
+  .cargo { font-size: 32px; color: #e3c47a; margin-top: 18px; font-weight: 600; }
+  .local { font-size: 26px; color: #e7d3d6; margin-top: 26px; }
+  .url { font-family: Consolas, monospace; font-size: 26px; color: #c9a24b; margin-top: 8px; }
+</style>
+</head>
+<body>
+  <img src="icone.svg" alt="">
+  <div>
+    <h1>Ítalo Fonteles</h1>
+    <p class="cargo">Sites · Automação · Redes</p>
+    <p class="local">Boa Vista - RR</p>
+    <p class="url">italofonteles.dev</p>
+  </div>
+</body>
+</html>

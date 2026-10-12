@@ -24,7 +24,7 @@
   }
   </script>
   <meta name="author" content="Ítalo Fonteles">
-  <meta name="theme-color" content="#7a1f2b">
+  <meta name="theme-color" content="#1c060a">
 
   <!-- Marca que o JS está ativo (os efeitos de reveal só escondem conteúdo se isto rodar) -->
   <script>document.documentElement.classList.add('js');</script>
@@ -33,11 +33,16 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Ítalo Fonteles | Infraestrutura, Automação e Sistemas">
   <meta property="og:description" content="Infraestrutura A/V, automação e desenvolvimento de sistemas. Projetos e cases de campo.">
-  <meta property="og:image" content="https://italofonteles.dev/assets/img/preview.jpg">
+  <meta property="og:image" content="https://italofonteles.dev/assets/marca/compartilhar.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:url" content="https://italofonteles.dev/">
 
-  <!-- Ícone da aba (emoji, sem arquivo extra) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <!-- Ícone da aba e do celular (marca "if") -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/marca/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/marca/apple-touch-icon.png">
 
   <title>Ítalo Fonteles | Infraestrutura, Automação e Sistemas</title>
   <link rel="stylesheet" href="css/base.css">
@@ -46,7 +51,22 @@
 <body>
 
   <header class="navbar">
-    <a href="#inicio" class="navbar__logo">&lt;ítalo<span>/</span>&gt;</a>
+    <a href="#inicio" class="navbar__logo" aria-label="Ítalo Fonteles, voltar ao início">
+      <svg class="navbar__marca" viewBox="0 0 120 120" aria-hidden="true">
+        <rect width="120" height="120" rx="26" fill="#1c060a"/>
+        <g fill="#f8f4ec">
+          <rect x="27" y="25" width="12" height="12" rx="3"/>
+          <rect x="19" y="45" width="20" height="10" rx="2"/>
+          <rect x="28" y="45" width="11" height="37" rx="2"/>
+          <rect x="18" y="74" width="29" height="10" rx="2"/>
+          <path d="M63.5 82 V44 Q63.5 30.5 77 30.5 H83" fill="none" stroke="#f8f4ec" stroke-width="11"/>
+          <rect x="50" y="46" width="30" height="10" rx="2"/>
+          <rect x="53" y="74" width="26" height="10" rx="2"/>
+        </g>
+        <rect class="navbar__cursor" x="87" y="35" width="15" height="49" rx="2" fill="#c9a24b"/>
+      </svg>
+      <span>Ítalo Fonteles</span>
+    </a>
     <button class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
     <nav class="navbar__menu" id="menu">
       <a href="#sobre">Sobre</a>

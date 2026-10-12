@@ -35,7 +35,9 @@
       background: linear-gradient(120deg, var(--vinho-escuro), var(--vinho));
       color: #fff; padding: 11mm 14mm 9mm;
       border-bottom: 2.5px solid var(--dourado);
+      display: flex; align-items: center; gap: 6mm;
     }
+    .topo .marca { width: 19mm; height: 19mm; flex-shrink: 0; border-radius: 4mm; box-shadow: 0 0 0 1px rgba(201, 162, 75, .5); }
     .topo h1 { font-size: 25pt; font-weight: 700; letter-spacing: .3px; line-height: 1.1; }
     .topo .cargo { color: var(--dourado-claro); font-size: 11pt; margin-top: 3px; font-weight: 600; }
     .topo .local { color: #e7d3d6; font-size: 9pt; margin-top: 4px; }
@@ -77,9 +79,12 @@
 <body>
 
   <header class="topo">
-    <h1>Ítalo Fonteles</h1>
-    <p class="cargo">Infraestrutura de TI e Audiovisual · Automação · Sites e Sistemas</p>
-    <p class="local">Boa Vista - RR · Disponível para projetos, contratos e viagens</p>
+    <img class="marca" src="../assets/marca/icone.svg" alt="">
+    <div>
+      <h1>Ítalo Fonteles</h1>
+      <p class="cargo">Infraestrutura de TI e Audiovisual · Automação · Sites e Sistemas</p>
+      <p class="local">Boa Vista - RR · Disponível para projetos, contratos e viagens</p>
+    </div>
   </header>
 
   <div class="corpo">
