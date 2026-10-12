@@ -45,6 +45,24 @@
     "demo": null
   },
   {
+    "titulo": "Site · Dra. Michele Fonteles",
+    "resumo": "Site institucional para advocacia previdenciária, trabalhista e penal em Boa Vista - RR, com atendimento direto pelo WhatsApp.",
+    "tags": ["HTML", "CSS", "JavaScript", "Responsivo"],
+    "categoria": "sites",
+    "status": "Cliente · No ar",
+    "repo": "https://github.com/ItaloFonteles/Projeto_Michele",
+    "demo": "https://italofonteles.github.io/Projeto_Michele/"
+  },
+  {
+    "titulo": "Site · Davi Bastos Advocacia",
+    "resumo": "Site para consultoria jurídica empresarial em Boa Vista - RR, com detalhes por área de atuação, rota até o escritório e WhatsApp.",
+    "tags": ["HTML", "CSS", "JavaScript", "Responsivo"],
+    "categoria": "sites",
+    "status": "Cliente · No ar",
+    "repo": "https://github.com/ItaloFonteles/Site-davi-bastos",
+    "demo": "https://italofonteles.github.io/Site-davi-bastos/"
+  },
+  {
     "titulo": "Sistema de Vendas Online",
     "resumo": "E-commerce modelado com diagramas de classe UML e implementado em Java aplicando orientação a objetos.",
     "tags": ["Java", "POO", "UML"],
