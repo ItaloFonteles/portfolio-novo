@@ -36,6 +36,15 @@
     "demo": "https://italofonteles.github.io/projeto-eletrico/"
   },
   {
+    "titulo": "Catálogo com Pedido pelo WhatsApp",
+    "resumo": "Cardápio online para comércio local: o cliente escolhe tamanho e adicionais, vê a taxa de entrega do bairro e envia o pedido pronto no WhatsApp da loja. O dono atualiza os produtos numa planilha do Google, sem comissão por pedido.",
+    "tags": ["HTML", "CSS", "JavaScript", "Google Planilhas", "WhatsApp"],
+    "categoria": "sites",
+    "status": "Funcionando",
+    "repo": "https://github.com/ItaloFonteles/catalogo-whatsapp",
+    "demo": "https://italofonteles.github.io/catalogo-whatsapp/"
+  },
+  {
     "titulo": "Servidor de Escritório que Funciona Offline",
     "resumo": "Arquivos, senhas e backup da empresa num servidor local que continua funcionando quando a internet cai, com acesso remoto seguro e cópia automática para a nuvem.",
     "tags": ["Docker", "Nextcloud", "WireGuard", "Backup"],
