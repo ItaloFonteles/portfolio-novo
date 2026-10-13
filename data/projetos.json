@@ -18,6 +18,15 @@
     "demo": null
   },
   {
+    "titulo": "Monitor de Transmissão ao Vivo",
+    "resumo": "Para Câmaras, igrejas e eventos: vigia a live no YouTube e avisa no Telegram ou WhatsApp se ela cair, não começar no horário da sessão, ficar com tela preta, congelada ou sem áudio. Painel ao vivo com audiência e relatório de cada sessão.",
+    "tags": ["Python", "ffmpeg", "yt-dlp", "Docker", "Telegram"],
+    "categoria": "infra",
+    "status": "Funcionando",
+    "repo": "https://github.com/ItaloFonteles/monitor-transmissao",
+    "demo": null
+  },
+  {
     "titulo": "Projeto Elétrico como Código (NBR 5410)",
     "resumo": "Descreve a casa num arquivo de texto e gera previsão de cargas, circuitos, disjuntores, bitolas, DR, queda de tensão, diagrama unifilar e lista de materiais. Revisões versionadas no Git.",
     "tags": ["Python", "NBR 5410", "SVG", "Git"],
@@ -40,15 +49,6 @@
     "resumo": "Site rápido e bilíngue com botão de WhatsApp e formulário que alimenta uma planilha de contatos e dispara resposta e lembrete de retorno automaticamente.",
     "tags": ["HTML", "CSS", "JavaScript", "n8n"],
     "categoria": "sites",
-    "status": "Planejado",
-    "repo": null,
-    "demo": null
-  },
-  {
-    "titulo": "Transmissão Automatizada de Sessões",
-    "resumo": "Para Câmaras e órgãos públicos: verifica o encoder, abre a live no YouTube, divulga o link, alerta se a transmissão cair e arquiva o vídeo com a pauta.",
-    "tags": ["n8n", "YouTube API", "Encoders", "Docker"],
-    "categoria": "automacao",
     "status": "Planejado",
     "repo": null,
     "demo": null
