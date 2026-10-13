@@ -24,7 +24,7 @@
     "categoria": "infra",
     "status": "Funcionando",
     "repo": "https://github.com/ItaloFonteles/projeto-eletrico",
-    "demo": null
+    "demo": "https://italofonteles.github.io/projeto-eletrico/"
   },
   {
     "titulo": "Servidor de Escritório que Funciona Offline",
