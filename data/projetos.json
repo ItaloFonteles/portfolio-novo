@@ -18,6 +18,15 @@
     "demo": null
   },
   {
+    "titulo": "Projeto Elétrico como Código (NBR 5410)",
+    "resumo": "Descreve a casa num arquivo de texto e gera previsão de cargas, circuitos, disjuntores, bitolas, DR, queda de tensão, diagrama unifilar e lista de materiais. Revisões versionadas no Git.",
+    "tags": ["Python", "NBR 5410", "SVG", "Git"],
+    "categoria": "infra",
+    "status": "Funcionando",
+    "repo": "https://github.com/ItaloFonteles/projeto-eletrico",
+    "demo": null
+  },
+  {
     "titulo": "Servidor de Escritório que Funciona Offline",
     "resumo": "Arquivos, senhas e backup da empresa num servidor local que continua funcionando quando a internet cai, com acesso remoto seguro e cópia automática para a nuvem.",
     "tags": ["Docker", "Nextcloud", "WireGuard", "Backup"],
