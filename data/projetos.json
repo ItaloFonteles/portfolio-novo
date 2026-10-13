@@ -19,7 +19,7 @@
   },
   {
     "titulo": "Monitor de Transmissão ao Vivo",
-    "resumo": "Para Câmaras, igrejas e eventos: vigia a live no YouTube e avisa no Telegram ou WhatsApp se ela cair, não começar no horário da sessão, ficar com tela preta, congelada ou sem áudio. Painel ao vivo com audiência e relatório de cada sessão.",
+    "resumo": "Para Câmaras, igrejas e eventos: vigia a live no YouTube e avisa no Telegram ou WhatsApp se ela cair, não começar no horário da sessão, ficar com tela preta, congelada ou sem áudio. Canais e horários das sessões cadastrados pelo painel web, que mostra a audiência ao vivo e gera o relatório de cada sessão.",
     "tags": ["Python", "ffmpeg", "yt-dlp", "Docker", "Telegram"],
     "categoria": "infra",
     "status": "Funcionando",
