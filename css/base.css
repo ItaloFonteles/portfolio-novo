@@ -1,57 +1,24 @@
 /* ===== VARIÁVEIS: trocar o tema inteiro mexendo só aqui ===== */
 :root {
-  --bg: #0b1120;
-  --bg-alt: #020617;
-  --surface: #111827;
-  --border: #1e293b;
-  --text: #e5e7eb;
-  --text-muted: #94a3b8;
-  --accent: #38bdf8;
-  --accent-hover: #0ea5e9;
+  /* Tema escuro com uma cor de destaque só: o dourado da marca "if" */
+  --bg: #0d0b0c;          /* quase preto, puxado para o vinho */
+  --bg-alt: #131011;      /* seções alternadas */
+  --surface: #1a1617;     /* cards */
+  --surface-2: #231d1f;   /* cards por cima de cards */
+  --border: #2e2729;
+  --text: #f4efe6;
+  --text-soft: #d2c9bd;   /* parágrafos */
+  --text-muted: #9a9087;
+  --accent: #e8b84b;      /* dourado: botões, palavras em destaque, brilhos */
+  --accent-hover: #f5cc6e;
+  --on-accent: #1d1206;   /* texto sobre o dourado */
+  --glow: rgba(232, 184, 75, .32);
+  --wine: #7a1f2b;        /* vinho da marca, só em detalhes */
 
   --font-sans: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
-  --font-mono: "Cascadia Code", Consolas, monospace;
-  --radius: 12px;
-  --nav-height: 64px;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
-
-body {
-  font-family: var(--font-sans);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-img, video { max-width: 100%; display: block; }
-a { color: inherit; text-decoration: none; }
-
-.container { width: min(1100px, 100% - 40px); margin-inline: auto; }
-
-.section { padding: 90px 0; }
-.section--alt { background: var(--bg-alt); }
-.section h2 { font-size: 2rem; margin-bottom: 24px; }/* ===== VARIÁVEIS: trocar o tema inteiro mexendo só aqui ===== */
-:root {
-  /* Tema: vinho + dourado */
-  --bg: #f4ecdc;          /* champanhe (fundo principal) */
-  --bg-alt: #ede1ca;      /* dourado claro (seções alternadas) */
-  --surface: #fbf7ef;     /* marfim (cards) */
-  --gold: #c9a24b;        /* dourado (detalhes) */
-  --border: #e3d3b4;
-  --text: #24191a;
-  --text-soft: #43373a;   /* parágrafos */
-  --text-muted: #6b5d5f;
-  --accent: #7a1f2b;      /* vinho */
-  --accent-hover: #5a1520;
-  --on-accent: #f8f9fa;   /* texto sobre fundo accent */
-
-  --font-sans: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
-  --font-mono: "Cascadia Code", Consolas, monospace;
-  --radius: 12px;
-  --nav-height: 64px;
+  --font-mono: "Cascadia Code", Consolas, "SFMono-Regular", monospace;
+  --radius: 14px;
+  --nav-height: 68px;
 
   /* Foto do hero: ajuste aqui o enquadramento (x y). Ex.: center 20%, center top, 30% 15% */
   --foto-posicao: center 20%;
@@ -59,30 +26,30 @@ a { color: inherit; text-decoration: none; }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-height); color-scheme: dark; }
 
 body {
   font-family: var(--font-sans);
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 img, video { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
+::selection { background: var(--accent); color: var(--on-accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 
-.container { width: min(1100px, 100% - 40px); margin-inline: auto; }
+.container { width: min(1140px, 100% - 40px); margin-inline: auto; }
 
-.section { padding: 90px 0; }
+.section { padding: 100px 0; position: relative; }
 .section--alt { background: var(--bg-alt); }
-.section h2 { font-size: 2rem; margin-bottom: 24px; }
+
+.nowrap { white-space: nowrap; }
+.destaque { color: var(--accent); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { animation: none !important; transition: none !important; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
 }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { animation: none !important; transition: none !important; }
-}
-.nowrap { white-space: nowrap; }

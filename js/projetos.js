@@ -21,7 +21,7 @@
 
     return `
       <article class="card">
-        <span class="card__status">${esc(p.status)}</span>
+        <span class="card__status${/funcionando|no ar/i.test(p.status) ? '' : ' card__status--andamento'}">${esc(p.status)}</span>
         <h3>${esc(p.titulo)}</h3>
         <p>${esc(p.resumo)}</p>
         <ul class="tags">${p.tags.map(t => `<li>${esc(t)}</li>`).join('')}</ul>

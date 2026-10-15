@@ -24,7 +24,7 @@
   }
   </script>
   <meta name="author" content="Ítalo Fonteles">
-  <meta name="theme-color" content="#1c060a">
+  <meta name="theme-color" content="#0d0b0c">
 
   <!-- Marca que o JS está ativo (os efeitos de reveal só escondem conteúdo se isto rodar) -->
   <script>document.documentElement.classList.add('js');</script>
@@ -50,131 +50,309 @@
 </head>
 <body>
 
-  <header class="navbar">
-    <a href="#inicio" class="navbar__logo" aria-label="Ítalo Fonteles, voltar ao início">
-      <svg class="navbar__marca" viewBox="0 0 120 120" aria-hidden="true">
-        <rect width="120" height="120" rx="26" fill="#1c060a"/>
-        <g fill="#f8f4ec">
-          <rect x="27" y="25" width="12" height="12" rx="3"/>
-          <rect x="19" y="45" width="20" height="10" rx="2"/>
-          <rect x="28" y="45" width="11" height="37" rx="2"/>
-          <rect x="18" y="74" width="29" height="10" rx="2"/>
-          <path d="M63.5 82 V44 Q63.5 30.5 77 30.5 H83" fill="none" stroke="#f8f4ec" stroke-width="11"/>
-          <rect x="50" y="46" width="30" height="10" rx="2"/>
-          <rect x="53" y="74" width="26" height="10" rx="2"/>
-        </g>
-        <rect class="navbar__cursor" x="87" y="35" width="15" height="49" rx="2" fill="#c9a24b"/>
-      </svg>
-      <span>Ítalo Fonteles</span>
-    </a>
-    <button class="navbar__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
-    <nav class="navbar__menu" id="menu">
-      <a href="#servicos">Serviços</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#clientes">Clientes</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#campo">Campo</a>
-      <a href="#contato">Contato</a>
-    </nav>
+  <header class="topo">
+    <div class="container topo__barra">
+      <a href="#inicio" class="topo__logo" aria-label="Ítalo Fonteles, voltar ao início">
+        <svg class="topo__marca" viewBox="0 0 120 120" aria-hidden="true">
+          <rect width="120" height="120" rx="26" fill="#1c060a"/>
+          <g fill="#f8f4ec">
+            <rect x="27" y="25" width="12" height="12" rx="3"/>
+            <rect x="19" y="45" width="20" height="10" rx="2"/>
+            <rect x="28" y="45" width="11" height="37" rx="2"/>
+            <rect x="18" y="74" width="29" height="10" rx="2"/>
+            <path d="M63.5 82 V44 Q63.5 30.5 77 30.5 H83" fill="none" stroke="#f8f4ec" stroke-width="11"/>
+            <rect x="50" y="46" width="30" height="10" rx="2"/>
+            <rect x="53" y="74" width="26" height="10" rx="2"/>
+          </g>
+          <rect class="topo__cursor" x="87" y="35" width="15" height="49" rx="2" fill="#c9a24b"/>
+        </svg>
+        <span>Ítalo Fonteles</span>
+      </a>
+      <button class="topo__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+      <nav class="topo__menu" id="menu">
+        <a href="#servicos">Serviços</a>
+        <a href="#clientes">Clientes</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#campo">Campo</a>
+        <a class="btn btn--primary" target="_blank" rel="noopener"
+           href="https://wa.me/5595991618031?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Vi%20seu%20site%20e%20quero%20um%20or%C3%A7amento.">Pedir orçamento</a>
+      </nav>
+    </div>
+    <div class="topo__progresso" id="progresso" aria-hidden="true"></div>
   </header>
 
   <main>
     <section id="inicio" class="hero">
-      <div class="container hero__content">
-
-        <!-- Lado esquerdo: texto -->
+      <div class="container hero__conteudo">
         <div class="hero__texto">
-          <p class="hero__eyebrow">Olá, eu sou</p>
-          <h1>Ítalo Fonteles</h1>
-          <p class="hero__role">Sites · Automação · Redes em <span class="nowrap">Boa Vista - RR</span></p>
-          <p class="hero__text">
-            Ajudo empresas e escritórios a serem encontrados na internet, a automatizar
-            o atendimento e a manter a rede funcionando, com a experiência de quem já
-            cuidou de sistemas que não podiam falhar, de Câmaras Municipais a tribunais.
+          <p class="hero__terminal" aria-hidden="true"><span class="prompt">$</span><span id="digitando">italofonteles --boa-vista-rr</span><span class="cursor"></span></p>
+          <h1>Seu negócio,<br><span class="destaque">funcionando.</span></h1>
+          <p class="hero__sub">
+            Sites, atendimento automático no WhatsApp e redes para empresas e escritórios de
+            <b class="nowrap">Boa Vista - RR</b>. Feito por quem já cuidou de sistemas que não podiam
+            falhar, de Câmaras Municipais a tribunais.
           </p>
           <div class="hero__cta">
-            <a class="btn btn--primary" href="https://wa.me/5595991618031?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Vi%20seu%20site%20e%20quero%20um%20or%C3%A7amento."
-               target="_blank" rel="noopener">Pedir orçamento</a>
-            <a class="btn btn--ghost" href="#servicos">Ver serviços</a>
+            <a class="btn btn--primary" target="_blank" rel="noopener"
+               href="https://wa.me/5595991618031?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Vi%20seu%20site%20e%20quero%20um%20or%C3%A7amento.">Pedir orçamento</a>
+            <a class="link-seta" href="#clientes">Veja o que eu já entreguei <span aria-hidden="true">↓</span></a>
           </div>
+          <ul class="selos">
+            <li>Atendo em Boa Vista - RR, presencial ou on-line</li>
+            <li>A primeira conversa não tem custo</li>
+            <li>Experiência em Câmaras Municipais, TJPR e Justiça Federal</li>
+          </ul>
         </div>
 
-        <!-- Lado direito: imagem -->
-        <div class="hero__imagem">
-          <img src="assets/img/foto-perfil.jpg" alt="Foto de perfil de Ítalo Fonteles"
-               class="hero__foto" width="350" height="438">
-        </div>
-
+        <figure class="hero__retrato">
+          <img src="assets/img/foto-perfil.jpg" alt="Foto de perfil de Ítalo Fonteles" class="hero__foto" width="380" height="475">
+          <figcaption class="hero__etiqueta"><i aria-hidden="true"></i><div><b>Disponível para projetos</b><span>responde pelo WhatsApp</span></div></figcaption>
+        </figure>
       </div>
     </section>
 
-    <section id="servicos" class="section section--alt">
+    <div class="faixa" aria-label="O que eu faço: sites, catálogo com pedido no WhatsApp, robô de atendimento, monitoramento de rede e energia, transmissão ao vivo, câmeras, cabeamento e automações">
+      <div class="faixa__trilho" aria-hidden="true">
+        <span>sites</span><span>catálogo com pedido no WhatsApp</span><span>robô de atendimento</span>
+        <span>agendamento automático</span><span>monitoramento de rede e energia</span><span>transmissão ao vivo</span>
+        <span>câmeras e nobreaks</span><span>cabeamento e Wi-Fi</span><span>planilhas que se fazem sozinhas</span>
+        <span>sites</span><span>catálogo com pedido no WhatsApp</span><span>robô de atendimento</span>
+        <span>agendamento automático</span><span>monitoramento de rede e energia</span><span>transmissão ao vivo</span>
+        <span>câmeras e nobreaks</span><span>cabeamento e Wi-Fi</span><span>planilhas que se fazem sozinhas</span>
+      </div>
+    </div>
+
+    <section class="section" id="numeros">
+      <div class="container numero-grande reveal">
+        <div class="numero-grande__valor"><span class="destaque">+</span><span id="num-projetos">7</span></div>
+        <div class="numero-grande__rotulo">projetos entregues e funcionando</div>
+        <p>De sites para escritórios de advocacia a monitoramento de transmissão para Câmaras,
+          com <b>código aberto</b> para você ver como é feito.</p>
+        <div class="mini-numeros">
+          <div><b>2 sites</b><span>de clientes no ar em Boa Vista - RR</span></div>
+          <div><b>3 instituições</b><span>Câmaras Municipais, TJPR e Justiça Federal do Ceará</span></div>
+          <div><b>Testado</b><span>cada projeto entregue com testes e documentação</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="sem-complicacao">
+      <div class="container sem-complicacao">
+        <div class="reveal">
+          <span class="rotulo">sem complicação</span>
+          <h2>Para ter seu negócio funcionando, você <em>não</em> precisa:</h2>
+          <p>Só precisa de uma conversa pelo WhatsApp. O resto é comigo: eu explico em português claro e entrego funcionando.</p>
+          <a class="btn btn--primary" target="_blank" rel="noopener"
+             href="https://wa.me/5595991618031?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Quero%20conversar%20sobre%20um%20projeto.">Quero conversar</a>
+        </div>
+        <ul class="nao-precisa reveal">
+          <li>Entender de tecnologia</li>
+          <li>Saber programar</li>
+          <li>Contratar agência de fora do estado</li>
+          <li>Pagar comissão por pedido</li>
+          <li>Ficar dependente de quem fez</li>
+          <li>Instalar aplicativo complicado</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="servicos" class="section">
       <div class="container">
-        <h2 class="section__title reveal">Serviços</h2>
-        <p class="campo__intro reveal">
-          Soluções sob medida para pequenas empresas, clínicas, lojas e escritórios.
-          Você explica o problema; eu entrego funcionando e explico como usar.
-        </p>
+        <span class="rotulo reveal">serviços</span>
+        <h2 class="reveal">O que eu faço pela sua empresa</h2>
+        <p class="intro reveal">Soluções sob medida para pequenas empresas, clínicas, lojas e escritórios.
+          Você explica o problema; eu entrego funcionando e explico como usar.</p>
 
         <div class="servicos">
           <article class="servico reveal">
             <svg class="servico__icone" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M7 6h.01M10 6h.01M8 21h8M12 18v3"/></svg>
-            <h3>Sites</h3>
-            <p class="servico__chamada">Seu negócio encontrado no Google e no WhatsApp.</p>
+            <span class="servico__rotulo">sites</span>
+            <h3>Seu negócio encontrado no Google e no WhatsApp</h3>
             <ul>
               <li>Site rápido, bonito e que funciona bem no celular</li>
-              <li>Botão de WhatsApp, mapa e formulário de contato</li>
+              <li>Catálogo com pedido direto no WhatsApp, sem comissão</li>
               <li>Domínio próprio (.com.br, .adv.br) e hospedagem configurados</li>
               <li>Preparado para aparecer nas buscas do Google</li>
             </ul>
+            <div class="servico__rodape"><span>celular</span><span>Google</span><span>WhatsApp</span></div>
             <a class="servico__exemplo" href="#clientes">Ver sites entregues</a>
-            <a class="btn btn--primary servico__cta" target="_blank" rel="noopener"
+            <a class="btn btn--primary" target="_blank" rel="noopener"
                href="https://wa.me/5595991618031?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Quero%20um%20or%C3%A7amento%20de%20site.">Orçamento de site</a>
           </article>
 
           <article class="servico reveal">
             <svg class="servico__icone" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 10h6M9 14h4"/></svg>
-            <h3>Automação</h3>
-            <p class="servico__chamada">Menos trabalho repetitivo, mais tempo para o cliente.</p>
+            <span class="servico__rotulo">automação</span>
+            <h3>Menos trabalho repetitivo, mais tempo para o cliente</h3>
             <ul>
               <li>Robô de WhatsApp que responde, agenda e lembra o cliente</li>
               <li>Relatórios, planilhas e avisos que se fazem sozinhos</li>
               <li>Integração entre os sistemas que você já usa (n8n)</li>
               <li>Tudo documentado, para você não depender de mim</li>
             </ul>
+            <div class="servico__rodape"><span>n8n</span><span>Python</span><span>documentado</span></div>
             <a class="servico__exemplo" href="#projetos">Ver o robô de agendamento</a>
-            <a class="btn btn--primary servico__cta" target="_blank" rel="noopener"
+            <a class="btn btn--primary" target="_blank" rel="noopener"
                href="https://wa.me/5595991618031?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Quero%20automatizar%20uma%20rotina%20da%20minha%20empresa.">Orçamento de automação</a>
           </article>
 
           <article class="servico reveal">
             <svg class="servico__icone" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="6" rx="1.5"/><rect x="3" y="15" width="18" height="6" rx="1.5"/><path d="M7 6h.01M7 18h.01M12 9v6"/></svg>
-            <h3>Redes e infraestrutura</h3>
-            <p class="servico__chamada">Internet, equipamentos e energia sem dor de cabeça.</p>
+            <span class="servico__rotulo">redes e infraestrutura</span>
+            <h3>Internet, equipamentos e energia sem dor de cabeça</h3>
             <ul>
               <li>Cabeamento, organização de rack e Wi-Fi</li>
               <li>Câmeras, nobreaks e alertas quando algo cai</li>
-              <li>Servidor de arquivos e backup que funciona sem internet</li>
+              <li>Monitoramento de transmissão ao vivo para Câmaras e eventos</li>
               <li>Diagnóstico e manutenção de computadores</li>
             </ul>
+            <div class="servico__rodape"><span>rack</span><span>Wi-Fi</span><span>câmeras</span><span>nobreak</span></div>
             <a class="servico__exemplo" href="#campo">Ver instalações em tribunais</a>
-            <a class="btn btn--primary servico__cta" target="_blank" rel="noopener"
+            <a class="btn btn--primary" target="_blank" rel="noopener"
                href="https://wa.me/5595991618031?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Preciso%20de%20ajuda%20com%20a%20rede%20da%20minha%20empresa.">Orçamento de rede</a>
           </article>
         </div>
 
         <ol class="passos reveal">
-          <li><b>1. Conversa</b><span>Você me conta o problema pelo WhatsApp ou pessoalmente.</span></li>
-          <li><b>2. Proposta</b><span>Envio o que será feito, o prazo e o valor, sem surpresas.</span></li>
-          <li><b>3. Entrega e suporte</b><span>Entrego testado, explico como usar e continuo por perto.</span></li>
+          <li><b>Conversa</b><span>Você me conta o problema pelo WhatsApp ou pessoalmente.</span></li>
+          <li><b>Proposta</b><span>Envio o que será feito, o prazo e o valor, sem surpresas.</span></li>
+          <li><b>Entrega e suporte</b><span>Entrego testado, explico como usar e continuo por perto.</span></li>
         </ol>
       </div>
     </section>
 
-    <section id="sobre" class="section">
-      <div class="container">
-        <h2 class="section__title reveal">Sobre</h2>
+    <section class="section section--alt" id="na-pratica">
+      <div class="container na-pratica">
+        <div class="reveal">
+          <span class="rotulo">na prática</span>
+          <h2>O pedido chega pronto no seu WhatsApp</h2>
+          <p>Com o catálogo online, o cliente acha a sua loja no Google, escolhe os produtos e envia o pedido organizado.</p>
+          <ul class="na-pratica__lista">
+            <li>Tamanhos, adicionais e taxa de entrega por bairro já calculados</li>
+            <li>Você atualiza preços numa planilha, pelo celular</li>
+            <li>Sem comissão por pedido e sem aplicativo para instalar</li>
+          </ul>
+          <a class="link-seta" href="https://italofonteles.github.io/catalogo-whatsapp/" target="_blank" rel="noopener">Abrir a demonstração do catálogo <span aria-hidden="true">→</span></a>
+        </div>
 
+        <div class="reveal">
+          <div class="celular" role="img" aria-label="Conversa de WhatsApp ilustrativa: o cliente pede pelo catálogo e a loja recebe o Pix">
+            <div class="celular__topo"><span class="celular__avatar" aria-hidden="true">A</span><div><b>Açaiteria Exemplo</b><span>online</span></div></div>
+            <div class="conversa" id="conversa">
+              <div class="msg msg--cliente">Oi! Vi vocês no Google. Ainda dá tempo de pedir?<time>18:02</time></div>
+              <div class="msg msg--loja">Dá sim! Monta o pedido por aqui: <span class="msg__link">catalogo.exemplo</span><time>18:03</time></div>
+              <div class="msg msg--cliente"><pre><b>Pedido · Açaiteria Exemplo</b>
+2x Açaí 500 ml — R$ 36,00
+   + Granola
+Entrega (Caçari): R$ 6,00
+<b>Total: R$ 42,00</b>
+Pagamento: Pix</pre><time>18:07</time></div>
+              <div class="msg msg--loja">Pedido confirmado! Chega em 30 minutos 🛵<time>18:08</time></div>
+              <div class="pix"><b>R$ 42,00</b><div><span>Pix recebido</span><span>e o próximo pedido já chegou</span></div></div>
+            </div>
+          </div>
+          <p class="legenda-cena">cena ilustrativa · loja, valores e mensagens são exemplos</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="clientes" class="section">
+      <div class="container">
+        <span class="rotulo reveal">clientes</span>
+        <h2 class="reveal">Sites entregues e no ar</h2>
+        <p class="intro reveal">Escritórios de advocacia de Boa Vista - RR atendendo pelo WhatsApp.</p>
+
+        <div class="clientes">
+          <article class="cliente reveal">
+            <a class="cliente__tela" href="https://italofonteles.github.io/Projeto_Michele/" target="_blank" rel="noopener"
+               aria-label="Abrir o site da Dra. Michele Fonteles">
+              <span class="cliente__barra" aria-hidden="true"><i></i><i></i><i></i></span>
+              <img src="assets/img/cliente-michele-fonteles.jpg" alt="Página inicial do site da Dra. Michele Fonteles"
+                   width="960" height="600" loading="lazy">
+            </a>
+            <div class="cliente__info">
+              <span class="case__local">Advocacia · Boa Vista - RR</span>
+              <h3>Dra. Michele Fonteles</h3>
+              <p>Site institucional para advocacia previdenciária, trabalhista e penal, com atendimento direto pelo WhatsApp.</p>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsivo</li><li>WhatsApp</li>
+              </ul>
+              <a class="cliente__link" href="https://italofonteles.github.io/Projeto_Michele/" target="_blank" rel="noopener">Ver site →</a>
+            </div>
+          </article>
+
+          <article class="cliente reveal">
+            <a class="cliente__tela" href="https://italofonteles.github.io/Site-davi-bastos/" target="_blank" rel="noopener"
+               aria-label="Abrir o site do Dr. Davi Bastos">
+              <span class="cliente__barra" aria-hidden="true"><i></i><i></i><i></i></span>
+              <img src="assets/img/cliente-davi-bastos.jpg" alt="Página inicial do site do Dr. Davi Bastos"
+                   width="960" height="600" loading="lazy">
+            </a>
+            <div class="cliente__info">
+              <span class="case__local">Advocacia e consultoria · Boa Vista - RR</span>
+              <h3>Davi Bastos · Advogado &amp; Consultor</h3>
+              <p>Site para consultoria jurídica empresarial, com detalhes por área de atuação, rota até o escritório e contato pelo WhatsApp.</p>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsivo</li><li>WhatsApp</li>
+              </ul>
+              <a class="cliente__link" href="https://italofonteles.github.io/Site-davi-bastos/" target="_blank" rel="noopener">Ver site →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section section--alt">
+      <div class="container">
+        <span class="rotulo reveal">projetos</span>
+        <h2 class="reveal">Código aberto, funcionando de verdade</h2>
+        <p class="intro reveal">Cada projeto tem o código no GitHub, testes e documentação. Os que têm demonstração dá para usar agora.</p>
+        <div class="filtros reveal" id="filtros" role="group" aria-label="Filtrar projetos"></div>
+        <div class="projetos-grid" id="lista-projetos"></div>
+        <p class="projetos-aviso" id="projetos-aviso" hidden></p>
+      </div>
+    </section>
+
+    <section id="stack" class="section">
+      <div class="container">
+        <span class="rotulo reveal">ferramentas</span>
+        <h2 class="reveal">O que eu uso, <span class="destaque">em português claro</span></h2>
+        <div class="ferramentas reveal">
+          <div class="ferramenta-atual" id="ferramenta-atual" aria-live="polite">
+            <div class="ferramenta-atual__topo"><b>Python</b><small>01/13</small></div>
+            <em>desenvolvimento</em>
+            <p>A linguagem dos robôs e relatórios: lê planilhas e extratos, confere dados e gera arquivos sozinho.</p>
+          </div>
+          <div class="grupos" id="grupos-ferramentas">
+            <div class="grupo"><h3>desenvolvimento</h3><ul>
+              <li><button type="button" data-desc="A linguagem dos robôs e relatórios: lê planilhas e extratos, confere dados e gera arquivos sozinho."><i>Py</i>Python</button></li>
+              <li><button type="button" data-desc="Deixa o site interativo: carrinho do catálogo, filtros, painéis que se atualizam sozinhos."><i>JS</i>JavaScript</button></li>
+              <li><button type="button" data-desc="A estrutura e o visual de todo site: rápido, bonito e pensado primeiro para o celular."><i>&lt;/&gt;</i>HTML e CSS</button></li>
+              <li><button type="button" data-desc="Linguagem de sistemas maiores, estudada na faculdade de ADS com orientação a objetos."><i>Jv</i>Java</button></li>
+              <li><button type="button" data-desc="Guarda e consulta informações organizadas: clientes, agendamentos, histórico."><i>SQL</i>Banco de dados</button></li>
+            </ul></div>
+            <div class="grupo"><h3>automação</h3><ul>
+              <li><button type="button" data-desc="Liga os sistemas que você já usa e faz as tarefas repetidas sozinho: WhatsApp, planilhas, e-mail."><i>n8n</i>n8n</button></li>
+              <li><button type="button" data-desc="Empacota cada sistema para rodar igual em qualquer computador, sem instalação complicada."><i>🐳</i>Docker</button></li>
+              <li><button type="button" data-desc="Guarda cada versão do projeto: dá para ver o que mudou e voltar atrás se precisar."><i>Git</i>Git e GitHub</button></li>
+              <li><button type="button" data-desc="Robô que atende no WhatsApp: responde, agenda e manda lembrete para o cliente não faltar."><i>💬</i>WhatsApp API</button></li>
+            </ul></div>
+            <div class="grupo"><h3>infraestrutura</h3><ul>
+              <li><button type="button" data-desc="Cabeamento, Wi-Fi e rack organizados, com alerta no celular quando algo cai."><i>📶</i>Redes</button></li>
+              <li><button type="button" data-desc="Câmeras robóticas de transmissão, com controle fino por joystick, como em plenários."><i>🎥</i>Câmeras PTZ</button></li>
+              <li><button type="button" data-desc="Equipamentos que levam o vídeo para o YouTube e telões, monitorados para não cair."><i>📡</i>Encoders</button></li>
+              <li><button type="button" data-desc="Mesa e processamento de áudio para microfones sem eco, sem chiado e sem microfonia."><i>🎚</i>Áudio digital</button></li>
+            </ul></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section section--alt">
+      <div class="container">
+        <span class="rotulo reveal">sobre</span>
+        <h2 class="reveal">Quem vai cuidar do seu projeto</h2>
         <div class="sobre reveal">
           <div class="sobre__texto">
             <p>
@@ -219,107 +397,24 @@
       </div>
     </section>
 
-    <section id="clientes" class="section section--alt">
+    <section id="campo" class="section">
       <div class="container">
-        <h2 class="section__title reveal">Clientes</h2>
-        <p class="campo__intro reveal">
-          Sites entregues e no ar para escritórios de advocacia em Boa Vista - RR.
-        </p>
-
-        <div class="clientes">
-          <article class="cliente reveal">
-            <a class="cliente__tela" href="https://italofonteles.github.io/Projeto_Michele/" target="_blank" rel="noopener"
-               aria-label="Abrir o site da Dra. Michele Fonteles">
-              <span class="cliente__barra" aria-hidden="true"><i></i><i></i><i></i></span>
-              <img src="assets/img/cliente-michele-fonteles.jpg" alt="Página inicial do site da Dra. Michele Fonteles"
-                   width="960" height="600" loading="lazy">
-            </a>
-            <div class="cliente__info">
-              <span class="case__local">Advocacia · Boa Vista - RR</span>
-              <h3>Dra. Michele Fonteles</h3>
-              <p>Site institucional para advocacia previdenciária, trabalhista e penal, com atendimento direto pelo WhatsApp.</p>
-              <ul class="tags">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsivo</li><li>WhatsApp</li>
-              </ul>
-              <a class="cliente__link" href="https://italofonteles.github.io/Projeto_Michele/" target="_blank" rel="noopener">Ver site →</a>
-            </div>
-          </article>
-
-          <article class="cliente reveal">
-            <a class="cliente__tela" href="https://italofonteles.github.io/Site-davi-bastos/" target="_blank" rel="noopener"
-               aria-label="Abrir o site do Dr. Davi Bastos">
-              <span class="cliente__barra" aria-hidden="true"><i></i><i></i><i></i></span>
-              <img src="assets/img/cliente-davi-bastos.jpg" alt="Página inicial do site do Dr. Davi Bastos"
-                   width="960" height="600" loading="lazy">
-            </a>
-            <div class="cliente__info">
-              <span class="case__local">Advocacia e consultoria · Boa Vista - RR</span>
-              <h3>Davi Bastos · Advogado &amp; Consultor</h3>
-              <p>Site para consultoria jurídica empresarial, com detalhes por área de atuação, rota até o escritório e contato pelo WhatsApp.</p>
-              <ul class="tags">
-                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsivo</li><li>WhatsApp</li>
-              </ul>
-              <a class="cliente__link" href="https://italofonteles.github.io/Site-davi-bastos/" target="_blank" rel="noopener">Ver site →</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="stack" class="section section--alt">
-      <div class="container">
-        <h2 class="section__title reveal">Stack</h2>
-
-        <div class="stack reveal">
-          <div class="stack__grupo">
-            <h3>Desenvolvimento</h3>
-            <ul class="tags">
-              <li>Python</li><li>JavaScript</li><li>Java</li><li>SQL</li>
-              <li>HTML5</li><li>CSS3</li>
-            </ul>
-          </div>
-          <div class="stack__grupo">
-            <h3>Automação e DevOps</h3>
-            <ul class="tags">
-              <li>Docker</li><li>n8n</li><li>Git / GitHub</li><li>VS Code</li>
-            </ul>
-          </div>
-          <div class="stack__grupo">
-            <h3>Infraestrutura e A/V</h3>
-            <ul class="tags">
-              <li>Redes</li><li>Câmeras PTZ</li><li>Encoders</li>
-              <li>Mixers / Áudio digital</li><li>Firmware e diagnóstico</li><li>Hardware</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projetos" class="section">
-      <div class="container">
-        <h2 class="section__title reveal">Projetos</h2>
-        <div class="filtros reveal" id="filtros" role="group" aria-label="Filtrar projetos"></div>
-        <div class="projetos-grid" id="lista-projetos"></div>
-        <p class="projetos-aviso" id="projetos-aviso" hidden></p>
-      </div>
-    </section>
-
-    <section id="campo" class="section section--alt">
-      <div class="container">
-        <h2 class="section__title reveal">Experiência de campo</h2>
-        <p class="campo__intro reveal">
-          Infraestrutura audiovisual e de TI em ambientes institucionais, onde
-          falha não é opção. Cada caso mostra o problema, o que foi feito e o resultado.
+        <span class="rotulo reveal">experiência de campo</span>
+        <h2 class="reveal">Onde falha não é opção</h2>
+        <p class="intro reveal">
+          Infraestrutura audiovisual e de TI em ambientes institucionais. Cada caso mostra
+          o problema, o que foi feito e o resultado.
         </p>
         <div class="cases" id="lista-cases"></div>
         <p class="projetos-aviso" id="cases-aviso" hidden></p>
       </div>
     </section>
 
-    <section id="contato" class="section">
+    <section id="contato" class="section section--alt">
       <div class="container">
-        <h2 class="section__title reveal">Contato</h2>
-        <p class="campo__intro reveal">
+        <span class="rotulo reveal">contato</span>
+        <h2 class="reveal">Vamos conversar sobre o seu projeto?</h2>
+        <p class="intro reveal">
           Conte o que você precisa: um site, uma automação ou ajuda com a rede.
           Respondo pelo WhatsApp e a primeira conversa não tem custo.
         </p>
@@ -348,13 +443,19 @@
 
   <footer class="rodape">
     <div class="container">
-      <p>© <span id="ano"></span> Ítalo Fonteles · Feito com HTML, CSS e JavaScript</p>
+      <p>© <span id="ano"></span> Ítalo Fonteles · Boa Vista - RR · Feito com HTML, CSS e JavaScript</p>
     </div>
   </footer>
+
+  <a class="whats-flutuante" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp"
+     href="https://wa.me/5595991618031?text=Ol%C3%A1%2C%20%C3%8Dtalo!%20Vi%20seu%20site%20e%20quero%20um%20or%C3%A7amento.">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3z"/></svg>
+  </a>
 
   <!-- utils.js precisa vir primeiro (define esc()) -->
   <script src="js/utils.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/efeitos.js" defer></script>
   <script src="js/projetos.js" defer></script>
   <script src="js/cases.js" defer></script>
   <script src="js/contato.js" defer></script>

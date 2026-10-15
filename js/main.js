@@ -1,5 +1,5 @@
 (() => {
-  const toggle = document.querySelector('.navbar__toggle');
+  const toggle = document.querySelector('.topo__toggle');
   const menu = document.getElementById('menu');
 
   toggle.addEventListener('click', () => {
