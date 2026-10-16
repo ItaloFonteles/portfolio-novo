@@ -21,7 +21,6 @@
   --nav-height: 68px;
 
   /* Foto do hero: ajuste aqui o enquadramento (x y). Ex.: center 20%, center top, 30% 15% */
-  --foto-posicao: center 20%;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
