@@ -44,7 +44,7 @@
   padding: calc(var(--nav-height) + 40px) 0 60px;
   position: relative; isolation: isolate; overflow: hidden;
 }
-/* grade "tech" que some nas bordas + brilho dourado à direita */
+/* grade "tech" que some nas bordas + brilho dourado atrás da foto */
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: -2;
   background:
@@ -59,8 +59,7 @@
   background: radial-gradient(circle, rgba(232, 184, 75, .22), rgba(122, 31, 43, .18) 40%, transparent 68%);
   filter: blur(10px);
 }
-.hero__conteudo { display: grid; }
-.hero__texto { max-width: 820px; }
+.hero__conteudo { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
 
 .hero__terminal { font-family: var(--font-mono); font-size: .92rem; color: var(--text-muted); margin-bottom: 22px; }
 .hero__terminal .prompt { color: var(--accent); margin-right: 6px; }
@@ -83,13 +82,33 @@
   font-size: .72rem; font-weight: 800; color: var(--on-accent); background: var(--accent); flex-shrink: 0;
 }
 
-.hero__disponivel {
-  display: inline-flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; margin-bottom: 22px;
-  background: rgba(26, 22, 23, .92); border: 1px solid var(--border); border-radius: 999px;
-  padding: 7px 14px; font-size: .85rem;
+.hero__retrato { position: relative; justify-self: center; }
+/* raios de luz atrás da foto, girando devagar */
+.hero__retrato::before {
+  content: ""; position: absolute; inset: -18%; z-index: -1; border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0 20deg, rgba(232, 184, 75, .18) 30deg, transparent 50deg,
+    transparent 110deg, rgba(232, 184, 75, .12) 125deg, transparent 145deg, transparent 220deg,
+    rgba(232, 184, 75, .16) 235deg, transparent 255deg);
+  -webkit-mask-image: radial-gradient(circle, #000 35%, transparent 70%);
+          mask-image: radial-gradient(circle, #000 35%, transparent 70%);
+  animation: girar 40s linear infinite;
 }
-.hero__disponivel span { color: var(--text-muted); }
-.hero__disponivel i { width: 9px; height: 9px; border-radius: 50%; background: #3fbf73; box-shadow: 0 0 0 4px rgba(63, 191, 115, .2); flex-shrink: 0; }
+@keyframes girar { to { transform: rotate(360deg); } }
+.hero__foto {
+  width: min(380px, 80vw); height: auto; aspect-ratio: 4 / 5;
+  object-fit: cover; object-position: var(--foto-posicao);
+  border-radius: 28px; border: 1px solid rgba(232, 184, 75, .35);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .8), 0 0 0 8px rgba(232, 184, 75, .06);
+}
+.hero__etiqueta {
+  position: absolute; left: -28px; bottom: 34px;
+  display: flex; gap: 10px; align-items: center;
+  background: rgba(26, 22, 23, .92); border: 1px solid var(--border); border-radius: 14px;
+  padding: 10px 14px; font-size: .85rem; box-shadow: 0 16px 40px -12px rgba(0, 0, 0, .7);
+}
+.hero__etiqueta b { display: block; font-size: .95rem; }
+.hero__etiqueta span { color: var(--text-muted); }
+.hero__etiqueta i { width: 10px; height: 10px; border-radius: 50%; background: #3fbf73; box-shadow: 0 0 0 4px rgba(63, 191, 115, .2); flex-shrink: 0; }
 
 /* ===== FAIXA ROLANDO ===== */
 .faixa {
@@ -411,8 +430,10 @@
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 960px) {
-  .sem-complicacao, .na-pratica, .ferramentas, .sobre, .contato { grid-template-columns: 1fr; }
-  .hero__disponivel span { display: none; }
+  .hero__conteudo, .sem-complicacao, .na-pratica, .ferramentas, .sobre, .contato { grid-template-columns: 1fr; }
+  .hero__retrato { order: -1; }
+  .hero__foto { width: min(260px, 70vw); }
+  .hero__etiqueta { left: 50%; transform: translateX(-50%); bottom: -18px; white-space: nowrap; }
   .hero::after { right: 50%; transform: translate(50%, -60%); width: 520px; height: 520px; }
   .ferramenta-atual { position: static; }
 }
