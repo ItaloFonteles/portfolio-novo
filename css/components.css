@@ -39,13 +39,16 @@
 .link-seta:hover { color: var(--accent); }
 
 /* ===== HERO ===== */
-.hero {
+.hero { position: relative; isolation: isolate; overflow: clip; }
+/* parte que fica presa na tela enquanto a órbita abre (a altura extra da .hero é o "caminho" da rolagem) */
+.hero__fixo {
+  position: sticky; top: 0;
   min-height: min(100vh, 880px); display: flex; align-items: center;
   padding: calc(var(--nav-height) + 40px) 0 60px;
-  position: relative; isolation: isolate; overflow: hidden;
 }
+.hero--presa { height: calc(min(100vh, 880px) + 70vh); }
 /* grade "tech" que some nas bordas + brilho dourado atrás da foto */
-.hero::before {
+.hero__fixo::before {
   content: ""; position: absolute; inset: 0; z-index: -2;
   background:
     repeating-linear-gradient(0deg, rgba(255, 255, 255, .035) 0 1px, transparent 1px 56px),
@@ -53,13 +56,13 @@
   -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 75%);
           mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 75%);
 }
-.hero::after {
+.hero__fixo::after {
   content: ""; position: absolute; z-index: -1; width: 720px; height: 720px; right: -120px; top: 50%;
   transform: translateY(-50%);
   background: radial-gradient(circle, rgba(232, 184, 75, .22), rgba(122, 31, 43, .18) 40%, transparent 68%);
   filter: blur(10px);
 }
-.hero__conteudo { display: grid; grid-template-columns: 1.15fr .85fr; gap: 48px; align-items: center; }
+.hero__conteudo { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
 
 .hero__terminal { font-family: var(--font-mono); font-size: .92rem; color: var(--text-muted); margin-bottom: 22px; }
 .hero__terminal .prompt { color: var(--accent); margin-right: 6px; }
@@ -82,33 +85,44 @@
   font-size: .72rem; font-weight: 800; color: var(--on-accent); background: var(--accent); flex-shrink: 0;
 }
 
-.hero__retrato { position: relative; justify-self: center; }
-/* raios de luz atrás da foto, girando devagar */
-.hero__retrato::before {
-  content: ""; position: absolute; inset: -18%; z-index: -1; border-radius: 50%;
-  background: conic-gradient(from 0deg, transparent 0 20deg, rgba(232, 184, 75, .18) 30deg, transparent 50deg,
-    transparent 110deg, rgba(232, 184, 75, .12) 125deg, transparent 145deg, transparent 220deg,
-    rgba(232, 184, 75, .16) 235deg, transparent 255deg);
-  -webkit-mask-image: radial-gradient(circle, #000 35%, transparent 70%);
-          mask-image: radial-gradient(circle, #000 35%, transparent 70%);
-  animation: girar 40s linear infinite;
+.hero__disponivel {
+  display: inline-flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; margin-bottom: 22px;
+  background: rgba(26, 22, 23, .92); border: 1px solid var(--border); border-radius: 999px;
+  padding: 7px 14px; font-size: .85rem;
 }
-@keyframes girar { to { transform: rotate(360deg); } }
-.hero__foto {
-  width: min(380px, 80vw); height: auto; aspect-ratio: 4 / 5;
-  object-fit: cover; object-position: var(--foto-posicao);
-  border-radius: 28px; border: 1px solid rgba(232, 184, 75, .35);
-  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, .8), 0 0 0 8px rgba(232, 184, 75, .06);
+.hero__disponivel span { color: var(--text-muted); }
+.hero__disponivel i { width: 9px; height: 9px; border-radius: 50%; background: #3fbf73; box-shadow: 0 0 0 4px rgba(63, 191, 115, .2); flex-shrink: 0; }
+
+/* órbita: foto redonda no centro, cartões dos serviços girando, fios e pacotes de dados */
+.orbita { position: relative; width: 100%; max-width: 540px; aspect-ratio: 1; justify-self: center; }
+.orbita__fios { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; overflow: visible; }
+.orbita__eu {
+  position: absolute; left: 50%; top: 50%; width: 46%; aspect-ratio: 1; transform: translate(-50%, -50%);
+  border-radius: 50%; overflow: hidden; z-index: 2;
+  background: radial-gradient(circle at 50% 35%, #3a2a24, #171113 70%);
+  border: 1.5px solid rgba(232, 184, 75, .5);
+  box-shadow: 0 0 0 10px rgba(232, 184, 75, .05), 0 0 60px rgba(232, 184, 75, .18), 0 30px 60px -20px #000;
 }
-.hero__etiqueta {
-  position: absolute; left: -28px; bottom: 34px;
-  display: flex; gap: 10px; align-items: center;
-  background: rgba(26, 22, 23, .92); border: 1px solid var(--border); border-radius: 14px;
-  padding: 10px 14px; font-size: .85rem; box-shadow: 0 16px 40px -12px rgba(0, 0, 0, .7);
+/* rosto no centro do círculo (o rosto fica um pouco à direita na foto recortada) */
+.orbita__eu img { width: 118%; max-width: none; height: auto; margin: 4.5% 0 0 -7.8%; display: block; }
+.orbita__dica {
+  position: absolute; left: 50%; bottom: 8%; transform: translateX(-50%); z-index: 2;
+  font-family: var(--font-mono); font-size: .8rem; color: var(--text-muted); white-space: nowrap;
 }
-.hero__etiqueta b { display: block; font-size: .95rem; }
-.hero__etiqueta span { color: var(--text-muted); }
-.hero__etiqueta i { width: 10px; height: 10px; border-radius: 50%; background: #3fbf73; box-shadow: 0 0 0 4px rgba(63, 191, 115, .2); flex-shrink: 0; }
+.orbita__dica span { display: inline-block; color: var(--accent); animation: dica-descer 1.6s ease-in-out infinite; }
+@keyframes dica-descer { 50% { transform: translateY(4px); } }
+.orbita__cartao {
+  position: absolute; left: 0; top: 0; display: flex; align-items: center; gap: 10px;
+  background: rgba(26, 22, 23, .94); border: 1px solid var(--border); border-radius: 14px;
+  padding: 9px 13px 9px 10px; white-space: nowrap; font-size: .82rem; opacity: 0;
+  box-shadow: 0 14px 30px -12px rgba(0, 0, 0, .8);
+  transition: border-color .3s, box-shadow .3s;
+}
+.orbita__cartao svg { width: 30px; height: 30px; padding: 6px; border-radius: 9px; background: rgba(232, 184, 75, .12); stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+.orbita__cartao b { display: block; font-size: .86rem; }
+.orbita__cartao small { color: var(--text-muted); font-size: .72rem; display: flex; align-items: center; gap: 5px; }
+.orbita__cartao small i { width: 6px; height: 6px; border-radius: 50%; background: #3fbf73; }
+.orbita__cartao.aceso { border-color: rgba(232, 184, 75, .8); box-shadow: 0 0 0 3px rgba(232, 184, 75, .15), 0 0 24px rgba(232, 184, 75, .35); }
 
 /* ===== FAIXA ROLANDO ===== */
 .faixa {
@@ -431,10 +445,13 @@
 /* ===== RESPONSIVO ===== */
 @media (max-width: 960px) {
   .hero__conteudo, .sem-complicacao, .na-pratica, .ferramentas, .sobre, .contato { grid-template-columns: 1fr; }
-  .hero__retrato { order: -1; }
-  .hero__foto { width: min(260px, 70vw); }
-  .hero__etiqueta { left: 50%; transform: translateX(-50%); bottom: -18px; white-space: nowrap; }
-  .hero::after { right: 50%; transform: translate(50%, -60%); width: 520px; height: 520px; }
+  .orbita { order: -1; max-width: 400px; }
+  .orbita__cartao { font-size: .7rem; padding: 6px 9px 6px 7px; gap: 7px; border-radius: 11px; }
+  .orbita__cartao svg { width: 24px; height: 24px; padding: 4px; }
+  .orbita__cartao b { font-size: .74rem; }
+  .orbita__cartao small { font-size: .62rem; }
+  .hero__disponivel span { display: none; }
+  .hero__fixo::after { right: 50%; transform: translate(50%, -60%); width: 520px; height: 520px; }
   .ferramenta-atual { position: static; }
 }
 @media (max-width: 800px) {

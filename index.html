@@ -84,8 +84,10 @@
 
   <main>
     <section id="inicio" class="hero">
+      <div class="hero__fixo">
       <div class="container hero__conteudo">
         <div class="hero__texto">
+          <p class="hero__disponivel"><i aria-hidden="true"></i><b>Disponível para projetos</b><span>· responde pelo WhatsApp</span></p>
           <p class="hero__terminal" aria-hidden="true"><span class="prompt">$</span><span id="digitando">italofonteles --boa-vista-rr</span><span class="cursor"></span></p>
           <h1>Seu negócio,<br><span class="destaque">funcionando.</span></h1>
           <p class="hero__sub">
@@ -105,10 +107,13 @@
           </ul>
         </div>
 
-        <figure class="hero__retrato">
-          <img src="assets/img/foto-perfil.jpg" alt="Foto de perfil de Ítalo Fonteles" class="hero__foto" width="380" height="475">
-          <figcaption class="hero__etiqueta"><i aria-hidden="true"></i><div><b>Disponível para projetos</b><span>responde pelo WhatsApp</span></div></figcaption>
-        </figure>
+        <!-- Órbita: os serviços saem do rosto e giram em volta conforme a página rola (js/orbita.js) -->
+        <div class="orbita" id="orbita">
+          <svg class="orbita__fios" aria-hidden="true"></svg>
+          <div class="orbita__eu"><img src="assets/img/foto-recorte.webp" alt="Foto de Ítalo Fonteles" width="480" height="480"></div>
+          <p class="orbita__dica" aria-hidden="true">role a página <span>↓</span></p>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -456,6 +461,7 @@ Pagamento: Pix</pre><time>18:07</time></div>
   <script src="js/utils.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/efeitos.js" defer></script>
+  <script src="js/orbita.js" defer></script>
   <script src="js/projetos.js" defer></script>
   <script src="js/cases.js" defer></script>
   <script src="js/contato.js" defer></script>
