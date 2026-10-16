@@ -45,6 +45,15 @@
     "demo": "https://italofonteles.github.io/catalogo-whatsapp/"
   },
   {
+    "titulo": "Estoque Integrado com o Mercado Livre",
+    "resumo": "Para a loja que vende no balcão e no Mercado Livre: vendeu num lugar, o estoque muda no outro sozinho, inclusive em anúncios repetidos e variações. Cancelamento devolve o estoque, a conferência automática corrige o que escapou e o dono recebe aviso de venda e de produto acabando no WhatsApp.",
+    "tags": ["Python", "API Mercado Livre", "OAuth", "SQLite", "Docker"],
+    "categoria": "automacao",
+    "status": "Funcionando",
+    "repo": "https://github.com/ItaloFonteles/estoque-mercadolivre",
+    "demo": null
+  },
+  {
     "titulo": "Servidor de Escritório que Funciona Offline",
     "resumo": "Arquivos, senhas e backup da empresa num servidor local que continua funcionando quando a internet cai, com acesso remoto seguro e cópia automática para a nuvem.",
     "tags": ["Docker", "Nextcloud", "WireGuard", "Backup"],
